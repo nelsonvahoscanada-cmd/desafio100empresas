@@ -41,44 +41,33 @@
   }
 
     /* ══════════════════════════════════════════
-       CONTADOR DE DÍAS DEL DESAFÍO
-       Inicio: 11 de julio de 2026
-       Duración: 90 días
+       CRONÓMETRO DEL DESAFÍO — sección propia
+       Inicio: 11 de julio de 2026 · 90 días
     ══════════════════════════════════════════ */
     (function() {
-      const START = new Date('2026-07-11T00:00:00');
+      const START      = new Date('2026-07-11T00:00:00');
       const TOTAL_DAYS = 90;
 
-      function updateDayCounter() {
-        const now = new Date();
-        const diffMs = now - START;
-        const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      function updateDays() {
+        const now      = new Date();
+        const elapsed  = Math.floor((now - START) / 86400000);
+        const dayNum   = Math.min(Math.max(elapsed + 1, 1), TOTAL_DAYS);
+        const remaining= Math.max(TOTAL_DAYS - dayNum, 0);
+        const pct      = Math.round((dayNum / TOTAL_DAYS) * 100);
 
-        const dayEl = document.getElementById('dc-day');
-        const remEl = document.getElementById('dc-remaining');
+        const setEl = (id, val) => { const e = document.getElementById(id); if (e) e.textContent = val; };
+        setEl('dc-day',       dayNum);
+        setEl('dc-remaining', remaining);
+        setEl('dc-pct',       pct + '%');
 
-        if (!dayEl || !remEl) return;
-
-        if (diffDays < 0) {
-          dayEl.textContent = '—';
-          remEl.textContent = TOTAL_DAYS;
-        } else if (diffDays >= TOTAL_DAYS) {
-          dayEl.textContent = TOTAL_DAYS;
-          remEl.textContent = '0';
-        } else {
-          dayEl.textContent = diffDays + 1; // día 1 = el día de inicio
-          remEl.textContent = TOTAL_DAYS - (diffDays + 1);
-        }
+        const fill = document.getElementById('dc-fill');
+        if (fill) setTimeout(() => fill.style.width = pct + '%', 400);
       }
 
-      updateDayCounter();
-      // Actualizar a medianoche sin recargar
+      updateDays();
       const now = new Date();
       const msToMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1) - now;
-      setTimeout(function() {
-        updateDayCounter();
-        setInterval(updateDayCounter, 86400000);
-      }, msToMidnight);
+      setTimeout(() => { updateDays(); setInterval(updateDays, 86400000); }, msToMidnight);
     })();
 
 
@@ -1537,6 +1526,109 @@
       pointer-events: none; white-space: nowrap;
     }
     .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ─── SECCIÓN DÍAS DEL DESAFÍO ──────────────────────── */
+    #dias-desafio {
+      background: var(--black);
+      padding: 6rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .dias-grid {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+      margin: 3rem 0 2.5rem;
+    }
+
+    .dias-bloque {
+      flex: 1;
+      min-width: 160px;
+      max-width: 280px;
+      padding: 0 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Separador vertical entre bloques */
+    .dias-bloque + .dias-bloque::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 10%; bottom: 10%;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .dias-num {
+      font-family: var(--font-mono);
+      font-size: clamp(4rem, 12vw, 8rem);
+      font-weight: 700;
+      line-height: 1;
+      display: block;
+      letter-spacing: -0.02em;
+    }
+    .dias-num.verde   { color: var(--green); text-shadow: 0 0 60px rgba(141,198,63,0.2); }
+    .dias-num.opaco   { color: #2a2a2a; }
+    .dias-num.gris    { color: #444; }
+
+    .dias-label {
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.75rem;
+      display: block;
+    }
+
+    /* Barra de progreso de días */
+    .dias-progress-wrap {
+      max-width: 500px;
+      margin: 0 auto 1.5rem;
+    }
+    .dias-progress-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+    }
+    .dias-progress-meta span {
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .dias-progress-meta strong {
+      color: var(--green);
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+    .dias-track {
+      width: 100%;
+      height: 2px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .dias-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--green-dk), var(--green));
+      border-radius: 2px;
+      width: 0%;
+      transition: width 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dias-fecha-txt {
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+    }
+    .dias-fecha-txt span { color: var(--green); font-family: var(--font-mono); }
+
   </style>
 </head>
 <body>
@@ -1565,7 +1657,7 @@
 
     <ul class="nav-links">
       <li><a href="#que-es">El Desafío</a></li>
-      <li><a href="#episodios">Episodios</a></li><li><a href="#muro">Participantes</a></li>
+      <li><a href="#episodios">Episodios</a></li><li><a href="#dias-desafio">El Reto</a></li><li><a href="#muro">Participantes</a></li>
       <li><a href="#agenda">Agenda</a></li>
       <li><a href="#el-libro">El Libro</a></li>
       <li><a href="#faq">Preguntas</a></li>
@@ -1596,35 +1688,8 @@
   </div>
 
 
-  <!-- ═══ CONTADOR DE DÍAS DEL DESAFÍO ═══ -->
-  <div id="day-counter" role="status" aria-live="polite">
-    <div class="container">
-      <div class="day-counter-inner">
-        <div class="day-counter-item">
-          <span class="day-counter-label">Iniciamos</span>
-          <span class="day-counter-val">11 Jul 2026</span>
-        </div>
-        <div class="day-counter-sep"></div>
-        <div class="day-counter-item">
-          <span class="day-counter-label">Hoy es el día</span>
-          <span class="day-counter-val" id="dc-day">—</span>
-        </div>
-        <div class="day-counter-sep"></div>
-        <div class="day-counter-item">
-          <span class="day-counter-label">Quedan</span>
-          <span class="day-counter-val" id="dc-remaining">—</span>
-          <span class="day-counter-label">días</span>
-        </div>
-        <div class="day-counter-sep"></div>
-        <div class="day-counter-item">
-          <span class="day-counter-label">Meta</span>
-          <span class="day-counter-val">90 días</span>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- ═══════════════════ HERO ═══════════════════ -->
+    <!-- ═══════════════════ HERO ═══════════════════ -->
   <section id="hero">
     <div class="hero-bg"></div>
 
@@ -1922,6 +1987,55 @@
           Quiero ser uno de los 100
         </a>
       </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════ DÍAS DEL DESAFÍO ═══════════════════ -->
+  <section id="dias-desafio">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="eyebrow">Cronómetro del Desafío</span>
+        <div class="section-header-line"></div>
+      </div>
+
+      <div class="dias-grid">
+
+        <div class="dias-bloque reveal">
+          <span class="dias-num verde" id="dc-day">—</span>
+          <span class="dias-label">Día del Desafío</span>
+        </div>
+
+        <div class="dias-bloque reveal">
+          <span class="dias-num gris" id="dc-remaining">—</span>
+          <span class="dias-label">Días Restantes</span>
+        </div>
+
+        <div class="dias-bloque reveal">
+          <span class="dias-num opaco">90</span>
+          <span class="dias-label">Días Totales</span>
+        </div>
+
+      </div>
+
+      <!-- Barra de progreso de días -->
+      <div class="dias-progress-wrap reveal">
+        <div class="dias-progress-meta">
+          <span>Progreso del tiempo</span>
+          <strong id="dc-pct">—%</strong>
+        </div>
+        <div class="dias-track">
+          <div class="dias-fill" id="dc-fill"></div>
+        </div>
+      </div>
+
+      <p class="dias-fecha-txt reveal">
+        Inicio: <span>11 de julio de 2026</span>
+        &nbsp;·&nbsp;
+        Meta: <span>8 de octubre de 2026</span>
+      </p>
+
     </div>
   </section>
 
@@ -2565,7 +2679,7 @@
           <div class="footer-links-label">Navegación</div>
           <ul>
             <li><a href="#que-es">El Desafío</a></li>
-            <li><a href="#episodios">Episodios</a></li><li><a href="#muro">Participantes</a></li>
+            <li><a href="#episodios">Episodios</a></li><li><a href="#dias-desafio">El Reto</a></li><li><a href="#muro">Participantes</a></li>
             <li><a href="#agenda">Agenda</a></li>
             <li><a href="#el-libro">El Libro</a></li>
             <li><a href="#faq">Preguntas</a></li>
@@ -2828,44 +2942,33 @@
 
 
     /* ══════════════════════════════════════════
-       CONTADOR DE DÍAS DEL DESAFÍO
-       Inicio: 11 de julio de 2026
-       Duración: 90 días
+       CRONÓMETRO DEL DESAFÍO — sección propia
+       Inicio: 11 de julio de 2026 · 90 días
     ══════════════════════════════════════════ */
     (function() {
-      const START = new Date('2026-07-11T00:00:00');
+      const START      = new Date('2026-07-11T00:00:00');
       const TOTAL_DAYS = 90;
 
-      function updateDayCounter() {
-        const now = new Date();
-        const diffMs = now - START;
-        const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      function updateDays() {
+        const now      = new Date();
+        const elapsed  = Math.floor((now - START) / 86400000);
+        const dayNum   = Math.min(Math.max(elapsed + 1, 1), TOTAL_DAYS);
+        const remaining= Math.max(TOTAL_DAYS - dayNum, 0);
+        const pct      = Math.round((dayNum / TOTAL_DAYS) * 100);
 
-        const dayEl = document.getElementById('dc-day');
-        const remEl = document.getElementById('dc-remaining');
+        const setEl = (id, val) => { const e = document.getElementById(id); if (e) e.textContent = val; };
+        setEl('dc-day',       dayNum);
+        setEl('dc-remaining', remaining);
+        setEl('dc-pct',       pct + '%');
 
-        if (!dayEl || !remEl) return;
-
-        if (diffDays < 0) {
-          dayEl.textContent = '—';
-          remEl.textContent = TOTAL_DAYS;
-        } else if (diffDays >= TOTAL_DAYS) {
-          dayEl.textContent = TOTAL_DAYS;
-          remEl.textContent = '0';
-        } else {
-          dayEl.textContent = diffDays + 1; // día 1 = el día de inicio
-          remEl.textContent = TOTAL_DAYS - (diffDays + 1);
-        }
+        const fill = document.getElementById('dc-fill');
+        if (fill) setTimeout(() => fill.style.width = pct + '%', 400);
       }
 
-      updateDayCounter();
-      // Actualizar a medianoche sin recargar
+      updateDays();
       const now = new Date();
       const msToMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1) - now;
-      setTimeout(function() {
-        updateDayCounter();
-        setInterval(updateDayCounter, 86400000);
-      }, msToMidnight);
+      setTimeout(() => { updateDays(); setInterval(updateDays, 86400000); }, msToMidnight);
     })();
 
 
@@ -3088,6 +3191,109 @@
     }
     .day-counter-sep { width: 1px; height: 16px; background: var(--border); }
 
+
+    /* ─── SECCIÓN DÍAS DEL DESAFÍO ──────────────────────── */
+    #dias-desafio {
+      background: var(--black);
+      padding: 6rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .dias-grid {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+      margin: 3rem 0 2.5rem;
+    }
+
+    .dias-bloque {
+      flex: 1;
+      min-width: 160px;
+      max-width: 280px;
+      padding: 0 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Separador vertical entre bloques */
+    .dias-bloque + .dias-bloque::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 10%; bottom: 10%;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .dias-num {
+      font-family: var(--font-mono);
+      font-size: clamp(4rem, 12vw, 8rem);
+      font-weight: 700;
+      line-height: 1;
+      display: block;
+      letter-spacing: -0.02em;
+    }
+    .dias-num.verde   { color: var(--green); text-shadow: 0 0 60px rgba(141,198,63,0.2); }
+    .dias-num.opaco   { color: #2a2a2a; }
+    .dias-num.gris    { color: #444; }
+
+    .dias-label {
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.75rem;
+      display: block;
+    }
+
+    /* Barra de progreso de días */
+    .dias-progress-wrap {
+      max-width: 500px;
+      margin: 0 auto 1.5rem;
+    }
+    .dias-progress-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+    }
+    .dias-progress-meta span {
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .dias-progress-meta strong {
+      color: var(--green);
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+    .dias-track {
+      width: 100%;
+      height: 2px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .dias-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--green-dk), var(--green));
+      border-radius: 2px;
+      width: 0%;
+      transition: width 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dias-fecha-txt {
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+    }
+    .dias-fecha-txt span { color: var(--green); font-family: var(--font-mono); }
+
   </style>
 </head>
 <body>
@@ -3116,7 +3322,7 @@
 
     <ul class="nav-links">
       <li><a href="#que-es">El Desafío</a></li>
-      <li><a href="#episodios">Episodios</a></li><li><a href="#muro">Participantes</a></li>
+      <li><a href="#episodios">Episodios</a></li><li><a href="#dias-desafio">El Reto</a></li><li><a href="#muro">Participantes</a></li>
       <li><a href="#agenda">Agenda</a></li>
       <li><a href="#el-libro">El Libro</a></li>
       <li><a href="#faq">Preguntas</a></li>
@@ -4026,7 +4232,7 @@
           <div class="footer-links-label">Navegación</div>
           <ul>
             <li><a href="#que-es">El Desafío</a></li>
-            <li><a href="#episodios">Episodios</a></li><li><a href="#muro">Participantes</a></li>
+            <li><a href="#episodios">Episodios</a></li><li><a href="#dias-desafio">El Reto</a></li><li><a href="#muro">Participantes</a></li>
             <li><a href="#agenda">Agenda</a></li>
             <li><a href="#el-libro">El Libro</a></li>
             <li><a href="#faq">Preguntas</a></li>
@@ -4289,44 +4495,33 @@
 
 
     /* ══════════════════════════════════════════
-       CONTADOR DE DÍAS DEL DESAFÍO
-       Inicio: 11 de julio de 2026
-       Duración: 90 días
+       CRONÓMETRO DEL DESAFÍO — sección propia
+       Inicio: 11 de julio de 2026 · 90 días
     ══════════════════════════════════════════ */
     (function() {
-      const START = new Date('2026-07-11T00:00:00');
+      const START      = new Date('2026-07-11T00:00:00');
       const TOTAL_DAYS = 90;
 
-      function updateDayCounter() {
-        const now = new Date();
-        const diffMs = now - START;
-        const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      function updateDays() {
+        const now      = new Date();
+        const elapsed  = Math.floor((now - START) / 86400000);
+        const dayNum   = Math.min(Math.max(elapsed + 1, 1), TOTAL_DAYS);
+        const remaining= Math.max(TOTAL_DAYS - dayNum, 0);
+        const pct      = Math.round((dayNum / TOTAL_DAYS) * 100);
 
-        const dayEl = document.getElementById('dc-day');
-        const remEl = document.getElementById('dc-remaining');
+        const setEl = (id, val) => { const e = document.getElementById(id); if (e) e.textContent = val; };
+        setEl('dc-day',       dayNum);
+        setEl('dc-remaining', remaining);
+        setEl('dc-pct',       pct + '%');
 
-        if (!dayEl || !remEl) return;
-
-        if (diffDays < 0) {
-          dayEl.textContent = '—';
-          remEl.textContent = TOTAL_DAYS;
-        } else if (diffDays >= TOTAL_DAYS) {
-          dayEl.textContent = TOTAL_DAYS;
-          remEl.textContent = '0';
-        } else {
-          dayEl.textContent = diffDays + 1; // día 1 = el día de inicio
-          remEl.textContent = TOTAL_DAYS - (diffDays + 1);
-        }
+        const fill = document.getElementById('dc-fill');
+        if (fill) setTimeout(() => fill.style.width = pct + '%', 400);
       }
 
-      updateDayCounter();
-      // Actualizar a medianoche sin recargar
+      updateDays();
       const now = new Date();
       const msToMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1) - now;
-      setTimeout(function() {
-        updateDayCounter();
-        setInterval(updateDayCounter, 86400000);
-      }, msToMidnight);
+      setTimeout(() => { updateDays(); setInterval(updateDays, 86400000); }, msToMidnight);
     })();
 
 

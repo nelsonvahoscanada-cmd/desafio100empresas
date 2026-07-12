@@ -2223,125 +2223,302 @@
   </section>
 
   <!-- ═══════════════════ EPISODIOS ═══════════════════ -->
-  <section id="episodios">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="eyebrow">Episodios publicados</span>
-        <div class="section-header-line"></div>
+  <!-- MODAL -->
+  <div class="ep-modal-overlay" id="epModal" role="dialog" aria-modal="true" aria-label="Información del episodio">
+    <div class="ep-modal" id="epModalBox">
+      <img id="mThumb" class="ep-modal-thumb" src="" alt="">
+      <div class="ep-modal-header">
+        <div>
+          <div class="ep-modal-badges">
+            <span class="ep-modal-cat" id="mCat"></span>
+            <span class="ep-modal-ep"  id="mEp"></span>
+          </div>
+        </div>
+        <button class="ep-modal-close" id="epModalClose" aria-label="Cerrar">&#x2715;</button>
       </div>
-      <p class="body-lg reveal" style="margin-bottom:2.5rem">
-        Cada historia, una lección. Cada empresario, un legado.
-      </p>
-      <div class="ep-grid">
-        
-        <a class="ep-card reveal" href="https://www.youtube.com/watch?v=_yazppIXYVk" target="_blank" rel="noopener">
-          <div class="ep-thumb">
-            <img src="https://img.youtube.com/vi/_yazppIXYVk/maxresdefault.jpg" alt="Rendirse no era una opción" loading="lazy"
-                 onerror="this.src='https://img.youtube.com/vi/_yazppIXYVk/hqdefault.jpg'">
-            <div class="ep-overlay"><div class="ep-play"></div></div>
-            <span class="ep-cat">Emprendedores</span>
-            <span class="ep-num">EP 01</span>
-          </div>
-          <div class="ep-body">
-            <span class="ep-eyebrow">Retryvive Counselling</span>
-            <div class="ep-titulo">Rendirse no era una opción</div>
-            <p class="ep-desc">Consejería profesional y psicoterapia para la comunidad latina en Canadá.</p>
-            <div class="ep-sep"></div>
-            <div class="ep-contact">dunia@retryvive.com</div>
-            <a class="ep-btn" href="https://www.youtube.com/watch?v=_yazppIXYVk" target="_blank" rel="noopener"
-               onclick="event.stopPropagation()">
-              <span class="ep-btn-tri"></span>
-              Ver Episodio Completo
-            </a>
-          </div>
-        </a>
-        <a class="ep-card reveal" href="https://www.youtube.com/watch?v=Lfx5p_SLl-4" target="_blank" rel="noopener">
-          <div class="ep-thumb">
-            <img src="https://img.youtube.com/vi/Lfx5p_SLl-4/maxresdefault.jpg" alt="Información falsa: lo que nadie te dice" loading="lazy"
-                 onerror="this.src='https://img.youtube.com/vi/Lfx5p_SLl-4/hqdefault.jpg'">
-            <div class="ep-overlay"><div class="ep-play"></div></div>
-            <span class="ep-cat">Inmigración</span>
-            <span class="ep-num">EP 02</span>
-          </div>
-          <div class="ep-body">
-            <span class="ep-eyebrow">CS Consulting Canada</span>
-            <div class="ep-titulo">Información falsa: lo que nadie te dice</div>
-            <p class="ep-desc">Asesoría profesional en procesos migratorios para latinos en Canadá.</p>
-            <div class="ep-sep"></div>
-            <div class="ep-contact">carmen33montoya@gmail.com</div>
-            <a class="ep-btn" href="https://www.youtube.com/watch?v=Lfx5p_SLl-4" target="_blank" rel="noopener"
-               onclick="event.stopPropagation()">
-              <span class="ep-btn-tri"></span>
-              Ver Episodio Completo
-            </a>
-          </div>
-        </a>
-        <a class="ep-card reveal" href="https://www.youtube.com/watch?v=xJaXI3r83sA" target="_blank" rel="noopener">
-          <div class="ep-thumb">
-            <img src="https://img.youtube.com/vi/xJaXI3r83sA/maxresdefault.jpg" alt="Protege tu futuro financiero" loading="lazy"
-                 onerror="this.src='https://img.youtube.com/vi/xJaXI3r83sA/hqdefault.jpg'">
-            <div class="ep-overlay"><div class="ep-play"></div></div>
-            <span class="ep-cat">Finanzas</span>
-            <span class="ep-num">EP 03</span>
-          </div>
-          <div class="ep-body">
-            <span class="ep-eyebrow">Roca Financial Group</span>
-            <div class="ep-titulo">Protege tu futuro financiero</div>
-            <p class="ep-desc">Planificación financiera y seguros de vida para familias latinas en Canadá.</p>
-            <div class="ep-sep"></div>
-            <div class="ep-contact">advice@carlosdar.io</div>
-            <a class="ep-btn" href="https://www.youtube.com/watch?v=xJaXI3r83sA" target="_blank" rel="noopener"
-               onclick="event.stopPropagation()">
-              <span class="ep-btn-tri"></span>
-              Ver Episodio Completo
-            </a>
-          </div>
-        </a>
-        <a class="ep-card reveal" href="https://www.youtube.com/watch?v=kS9Ff6J8i_s" target="_blank" rel="noopener">
-          <div class="ep-thumb">
-            <img src="https://img.youtube.com/vi/kS9Ff6J8i_s/maxresdefault.jpg" alt="El sabor latino que conquista Canadá" loading="lazy"
-                 onerror="this.src='https://img.youtube.com/vi/kS9Ff6J8i_s/hqdefault.jpg'">
-            <div class="ep-overlay"><div class="ep-play"></div></div>
-            <span class="ep-cat">Negocios</span>
-            <span class="ep-num">EP 04</span>
-          </div>
-          <div class="ep-body">
-            <span class="ep-eyebrow">La Costeñita Latin Market Food</span>
-            <div class="ep-titulo">El sabor latino que conquista Canadá</div>
-            <p class="ep-desc">Fabricación y venta de productos latinos auténticos para la comunidad hispana.</p>
-            <div class="ep-sep"></div>
-            <div class="ep-contact">+1 (825) 488-5472</div>
-            <a class="ep-btn" href="https://www.youtube.com/watch?v=kS9Ff6J8i_s" target="_blank" rel="noopener"
-               onclick="event.stopPropagation()">
-              <span class="ep-btn-tri"></span>
-              Ver Episodio Completo
-            </a>
-          </div>
-        </a>
-        <a class="ep-card reveal" href="https://www.youtube.com/watch?v=tLNUf_SkAD0" target="_blank" rel="noopener">
-          <div class="ep-thumb">
-            <img src="https://img.youtube.com/vi/tLNUf_SkAD0/maxresdefault.jpg" alt="Tijeras con propósito especial" loading="lazy"
-                 onerror="this.src='https://img.youtube.com/vi/tLNUf_SkAD0/hqdefault.jpg'">
-            <div class="ep-overlay"><div class="ep-play"></div></div>
-            <span class="ep-cat">Emprendedores</span>
-            <span class="ep-num">EP 05</span>
-          </div>
-          <div class="ep-body">
-            <span class="ep-eyebrow">Milena Children Stylist</span>
-            <div class="ep-titulo">Tijeras con propósito especial</div>
-            <p class="ep-desc">Especialista en corte para niños y atención a menores con necesidades especiales.</p>
-            <div class="ep-sep"></div>
-            <div class="ep-contact">403-607-2608 · IG: @milenachildrensstylist</div>
-            <a class="ep-btn" href="https://www.youtube.com/watch?v=tLNUf_SkAD0" target="_blank" rel="noopener"
-               onclick="event.stopPropagation()">
-              <span class="ep-btn-tri"></span>
-              Ver Episodio Completo
-            </a>
-          </div>
-        </a>
+      <div class="ep-modal-body">
+        <div class="ep-modal-empresa" id="mEmpresa"></div>
+        <div class="ep-modal-person"  id="mPerson"></div>
+        <div class="ep-modal-frase"   id="mFrase"></div>
+
+        <span class="ep-modal-section-label">La historia</span>
+        <p class="ep-modal-text" id="mSummary"></p>
+
+        <span class="ep-modal-section-label">Servicios</span>
+        <p class="ep-modal-text" id="mServices"></p>
+
+        <div class="ep-modal-divider"></div>
+
+        <span class="ep-modal-section-label">Contacto</span>
+        <div class="ep-modal-contact-grid" id="mContact"></div>
+
+        <div class="ep-modal-actions">
+          <a class="ep-modal-btn-primary"    id="mBtnWatch"   href="#" target="_blank" rel="noopener">Ver episodio completo</a>
+          <a class="ep-modal-btn-secondary"  id="mBtnCompany" href="#" target="_blank" rel="noopener">Visitar la empresa</a>
+        </div>
       </div>
     </div>
+  </div>
+
+  <section id="episodios">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="eyebrow">Historias que ya hacen parte del legado</span>
+        <div class="section-header-line"></div>
+      </div>
+      <p class="body-lg reveal" style="margin-bottom:2rem">
+        Conoce a los empresarios, sus negocios y las decisiones que marcaron sus vidas.
+      </p>
+
+      <!-- Filtros -->
+      <div class="ep-filters reveal" id="epFilters">
+        <button class="ep-filter-btn active" data-filter="all">Todos</button>
+        <button class="ep-filter-btn" data-filter="salud">Salud y Bienestar</button>
+        <button class="ep-filter-btn" data-filter="servicios">Servicios Profesionales</button>
+        <button class="ep-filter-btn" data-filter="inmigracion">Inmigración</button>
+        <button class="ep-filter-btn" data-filter="finanzas">Finanzas</button>
+        <button class="ep-filter-btn" data-filter="alimentos">Alimentos</button>
+        <button class="ep-filter-btn" data-filter="belleza">Belleza</button>
+        <button class="ep-filter-btn" data-filter="comunidad">Comunidad</button>
+      </div>
+
+      <!-- Carrusel / Grid -->
+      <div class="ep-carousel-wrap reveal" id="epGrid"></div>
+
+      <!-- CTA final -->
+      <div class="ep-cta-bottom reveal">
+        <p>¿Quieres que tu historia aparezca aquí?</p>
+        <a href="https://forms.gle/ZxDpuzUuEbr3LjjS6" target="_blank" rel="noopener" class="btn-primary">
+          Quiero ser uno de los 100
+        </a>
+      </div>
+
+    </div>
   </section>
+
+  <script>
+  /* ════════════════════════════════════════════════════
+     DATOS DE EPISODIOS
+     Para agregar un episodio: copia el bloque { } y
+     rellena los campos. status: 'published' | 'editing' | 'soon'
+  ════════════════════════════════════════════════════ */
+  const EP_DATA = [
+    {
+      id: 1,
+      status: 'published',
+      category: 'salud',
+      catLabel: 'Salud y Bienestar',
+      youtubeId: '_yazppIXYVk',
+      youtubeUrl: 'https://www.youtube.com/watch?v=_yazppIXYVk',
+      entrepreneur: 'Dunia Rodríguez',
+      company: 'Retryvive Counselling',
+      phrase: '"Rendirse no era una opción."',
+      summary: 'Dunia llegó a Canadá y encontró una comunidad latina que cargaba en silencio el peso de adaptarse a un nuevo mundo. Decidió que la salud mental debía dejar de ser un tabú y fundó Retryvive Counselling para ofrecer acompañamiento profesional en español.',
+      services: 'Consejería individual, psicoterapia, apoyo en ansiedad, duelo migratorio y adaptación cultural.',
+      contact: { email: 'dunia@retryvive.com' },
+      companyUrl: '',
+    },
+    {
+      id: 2,
+      status: 'published',
+      category: 'inmigracion',
+      catLabel: 'Inmigración',
+      youtubeId: 'Lfx5p_SLl-4',
+      youtubeUrl: 'https://www.youtube.com/watch?v=Lfx5p_SLl-4',
+      entrepreneur: 'Carmen Helena Montoya Sánchez',
+      company: 'CS Consulting Canada',
+      phrase: '"La información falsa le ha costado sueños a miles de familias."',
+      summary: 'Carmen Helena convirtió su propia experiencia migratoria en una herramienta para guiar a otros. Desde CS Consulting Canada asesora a latinos en sus procesos de inmigración con claridad, honestidad y rigor profesional.',
+      services: 'Consultoría en procesos migratorios, asesoría para residencia permanente, reagrupación familiar.',
+      contact: { email: 'carmen33montoya@gmail.com' },
+      companyUrl: '',
+    },
+    {
+      id: 3,
+      status: 'published',
+      category: 'finanzas',
+      catLabel: 'Finanzas',
+      youtubeId: 'xJaXI3r83sA',
+      youtubeUrl: 'https://www.youtube.com/watch?v=xJaXI3r83sA',
+      entrepreneur: 'Carlos D. Castillo',
+      company: 'Roca Financial Group',
+      phrase: '"Proteger a tu familia es la decisión más inteligente que puedes tomar hoy."',
+      summary: 'Carlos entendió que los latinos en Canadá necesitaban orientación financiera en su idioma y desde su cultura. Roca Financial Group ofrece planificación patrimonial y seguros de vida con un enfoque humano y profesional.',
+      services: 'Seguros de vida, planificación financiera, protección patrimonial, inversiones.',
+      contact: { email: 'advice@carlosdar.io', facebook: 'CarlosDCastilloSegurosyalgomas' },
+      companyUrl: '',
+    },
+    {
+      id: 4,
+      status: 'published',
+      category: 'alimentos',
+      catLabel: 'Alimentos',
+      youtubeId: 'kS9Ff6J8i_s',
+      youtubeUrl: 'https://www.youtube.com/watch?v=kS9Ff6J8i_s',
+      entrepreneur: 'Hugo Raúl Morales Vega',
+      company: 'La Costeñita Latin Market Food',
+      phrase: '"El sabor de casa no tiene que quedar atrás cuando migras."',
+      summary: 'Hugo trajo el sabor de su tierra a Canadá. La Costeñita fabrica y distribuye productos latinos auténticos que llevan el hogar a la mesa de miles de familias hispanas en el país.',
+      services: 'Fabricación y venta de productos latinos, distribución mayorista, mercado minorista.',
+      contact: { phone: '+1 (825) 488-5472' },
+      companyUrl: '',
+    },
+    {
+      id: 5,
+      status: 'published',
+      category: 'belleza',
+      catLabel: 'Belleza',
+      youtubeId: 'tLNUf_SkAD0',
+      youtubeUrl: 'https://www.youtube.com/watch?v=tLNUf_SkAD0',
+      entrepreneur: 'Milena Bolaños',
+      company: 'Milena Children Stylist',
+      phrase: '"Cada niño merece sentirse bien en su propio cuerpo, incluyendo su cabello."',
+      summary: 'Milena se especializó en algo que pocos se atreven: cortes de cabello para niños con necesidades especiales. Su paciencia, sensibilidad y talento la han convertido en un referente único para familias latinas en Canadá.',
+      services: 'Cortes infantiles especializados, atención a niños con TEA y necesidades especiales, estilismo para niños.',
+      contact: { phone: '403-607-2608', instagram: 'milenachildrensstylist', tiktok: 'MilenaChildrenStylist' },
+      companyUrl: '',
+    },
+  ];
+
+  /* ── Renderizar cards ── */
+  function thumbUrl(vid) {
+    return 'https://img.youtube.com/vi/' + vid + '/maxresdefault.jpg';
+  }
+  function thumbFb(vid) {
+    return 'https://img.youtube.com/vi/' + vid + '/hqdefault.jpg';
+  }
+
+  function buildCards(filter) {
+    const grid = document.getElementById('epGrid');
+    grid.innerHTML = '';
+
+    EP_DATA.forEach(ep => {
+      if (filter !== 'all' && ep.category !== filter) return;
+
+      const card = document.createElement('div');
+      card.className = 'ep-card' + (ep.status === 'soon' ? ' ep-soon' : '');
+      card.setAttribute('data-cat', ep.category);
+      card.setAttribute('data-id', ep.id);
+
+      /* Badge de estado */
+      let statusBadge = '';
+      if (ep.status === 'editing') statusBadge = '<span class="ep-status-badge ep-status-editing">En edición</span>';
+      if (ep.status === 'soon')    statusBadge = '<span class="ep-status-badge ep-status-soon">Próximamente</span>';
+
+      /* Botones visibles en hover */
+      let btns = '';
+      if (ep.status === 'published') {
+        btns = `
+          <a class="ep-btn-watch" href="${ep.youtubeUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Ver episodio</a>
+          <button class="ep-btn-info" onclick="event.stopPropagation(); openModal(${ep.id})">Información</button>
+        `;
+      } else {
+        btns = `<button class="ep-btn-info" onclick="event.stopPropagation(); openModal(${ep.id})">Información</button>`;
+      }
+
+      card.innerHTML = `
+        <div class="ep-thumb">
+          <img src="${thumbUrl(ep.youtubeId)}" alt="${ep.company}"
+               loading="lazy" onerror="this.src='${thumbFb(ep.youtubeId)}'">
+          <div class="ep-thumb-gradient"></div>
+          <span class="ep-cat">${ep.catLabel}</span>
+          <span class="ep-num">EP ${String(ep.id).padStart(2,'0')}</span>
+          ${statusBadge}
+          <div class="ep-hover-btns">${btns}</div>
+        </div>
+        <div class="ep-info">
+          <div class="ep-empresa-name">${ep.company}</div>
+          <div class="ep-person-name">${ep.entrepreneur}</div>
+        </div>
+      `;
+
+      /* Click en la card abre modal */
+      card.addEventListener('click', () => openModal(ep.id));
+      card.setAttribute('tabindex', '0');
+      card.addEventListener('keydown', e => { if(e.key==='Enter') openModal(ep.id); });
+
+      grid.appendChild(card);
+    });
+  }
+
+  /* ── Modal ── */
+  function openModal(id) {
+    const ep = EP_DATA.find(e => e.id === id);
+    if (!ep) return;
+
+    const overlay = document.getElementById('epModal');
+
+    document.getElementById('mThumb').src = thumbUrl(ep.youtubeId);
+    document.getElementById('mThumb').onerror = function(){ this.src = thumbFb(ep.youtubeId); };
+    document.getElementById('mCat').textContent    = ep.catLabel;
+    document.getElementById('mEp').textContent     = 'EP ' + String(ep.id).padStart(2,'0');
+    document.getElementById('mEmpresa').textContent = ep.company;
+    document.getElementById('mPerson').textContent  = ep.entrepreneur;
+    document.getElementById('mFrase').textContent   = ep.phrase;
+    document.getElementById('mSummary').textContent  = ep.summary;
+    document.getElementById('mServices').textContent = ep.services;
+
+    /* Contacto */
+    const c = ep.contact || {};
+    let contactHTML = '';
+    if (c.email)     contactHTML += `<div class="ep-modal-contact-item"><span class="ep-modal-contact-label">Email</span><a href="mailto:${c.email}">${c.email}</a></div>`;
+    if (c.phone)     contactHTML += `<div class="ep-modal-contact-item"><span class="ep-modal-contact-label">Teléfono</span><a href="tel:${c.phone}">${c.phone}</a></div>`;
+    if (c.instagram) contactHTML += `<div class="ep-modal-contact-item"><span class="ep-modal-contact-label">Instagram</span><a href="https://instagram.com/${c.instagram}" target="_blank">@${c.instagram}</a></div>`;
+    if (c.tiktok)    contactHTML += `<div class="ep-modal-contact-item"><span class="ep-modal-contact-label">TikTok</span><a href="https://tiktok.com/@${c.tiktok}" target="_blank">@${c.tiktok}</a></div>`;
+    if (c.facebook)  contactHTML += `<div class="ep-modal-contact-item"><span class="ep-modal-contact-label">Facebook</span><a href="https://facebook.com/${c.facebook}" target="_blank">Facebook</a></div>`;
+    if (c.web)       contactHTML += `<div class="ep-modal-contact-item"><span class="ep-modal-contact-label">Web</span><a href="${c.web}" target="_blank">${c.web}</a></div>`;
+    document.getElementById('mContact').innerHTML = contactHTML || '<div class="ep-modal-contact-item" style="color:#444">—</div>';
+
+    /* Botones */
+    const btnWatch = document.getElementById('mBtnWatch');
+    const btnCo    = document.getElementById('mBtnCompany');
+    btnWatch.href = ep.youtubeUrl || '#';
+    btnCo.href    = ep.companyUrl || '#';
+    btnCo.style.display = ep.companyUrl ? 'flex' : 'none';
+
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('epModalClose').focus();
+  }
+
+  function closeModal() {
+    document.getElementById('epModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('epModalClose').addEventListener('click', closeModal);
+  document.getElementById('epModal').addEventListener('click', e => {
+    if (e.target === document.getElementById('epModal')) closeModal();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  /* ── Filtros ── */
+  document.getElementById('epFilters').addEventListener('click', e => {
+    const btn = e.target.closest('.ep-filter-btn');
+    if (!btn) return;
+    document.querySelectorAll('.ep-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    buildCards(btn.dataset.filter);
+  });
+
+  /* ── Drag to scroll en móvil ── */
+  (function() {
+    const wrap = document.getElementById('epGrid');
+    let isDown = false, startX, scrollLeft;
+    wrap.addEventListener('mousedown', e => { isDown=true; startX=e.pageX-wrap.offsetLeft; scrollLeft=wrap.scrollLeft; });
+    wrap.addEventListener('mouseleave', () => isDown=false);
+    wrap.addEventListener('mouseup', () => isDown=false);
+    wrap.addEventListener('mousemove', e => {
+      if(!isDown) return; e.preventDefault();
+      wrap.scrollLeft = scrollLeft - (e.pageX-wrap.offsetLeft-startX);
+    });
+  })();
+
+  /* ── Iniciar ── */
+  buildCards('all');
+  </script>
+
 
     <!-- ═══════════════════ AGENDA ═══════════════════ -->
   <!--
@@ -3012,35 +3189,100 @@
 
   </script>
 </body>
-</html    /* ─── EPISODE CARDS ─────────────────────────────────── */
+</html
+    /* ══════════════════════════════════════════
+       MÓDULO EPISODIOS — Premium Streaming Style
+    ══════════════════════════════════════════ */
+
+    /* Sección */
     #episodios {
-      background: var(--black);
+      background: #0a0a0a;
       padding: 5rem 0 6rem;
     }
 
-    .ep-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+    /* Filtros de categoría */
+    .ep-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
     }
-    @media (max-width: 900px)  { .ep-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 560px)  { .ep-grid { grid-template-columns: 1fr; } }
+    .ep-filter-btn {
+      background: transparent;
+      border: 1px solid #2a2a2a;
+      color: #666;
+      font-family: var(--font-body);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .ep-filter-btn:hover,
+    .ep-filter-btn.active {
+      background: var(--green);
+      border-color: var(--green);
+      color: #000;
+    }
 
+    /* ── CARRUSEL MÓVIL ── */
+    .ep-carousel-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      display: flex;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      cursor: grab;
+    }
+    .ep-carousel-wrap::-webkit-scrollbar { display: none; }
+    .ep-carousel-wrap:active { cursor: grabbing; }
+
+    /* Cada card en el carrusel */
     .ep-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 6px;
+      scroll-snap-align: start;
+      flex: 0 0 82%;
+      max-width: 82%;
+      position: relative;
+      border-radius: 10px;
       overflow: hidden;
+      background: #111;
+      border: 1px solid #1e1e1e;
+      transition: transform 0.3s ease, border-color 0.3s, box-shadow 0.3s;
       display: flex;
       flex-direction: column;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.28s ease, border-color 0.28s, box-shadow 0.28s;
+      cursor: pointer;
     }
+
+    /* Desktop: grid 4 columnas */
+    @media (min-width: 700px) {
+      .ep-carousel-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        overflow-x: visible;
+        padding-bottom: 0;
+        cursor: default;
+      }
+      .ep-card {
+        flex: none;
+        max-width: none;
+        scroll-snap-align: none;
+      }
+    }
+    @media (min-width: 1060px) {
+      .ep-carousel-wrap {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
     .ep-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(141,198,63,0.35);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+      transform: translateY(-6px) scale(1.02);
+      border-color: rgba(141,198,63,0.4);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(141,198,63,0.1);
     }
 
     /* ── Thumbnail ── */
@@ -3052,173 +3294,355 @@
       background: #090909;
     }
     .ep-thumb img {
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.4s ease;
+      transition: transform 0.5s ease;
+      filter: brightness(0.92);
     }
-    .ep-card:hover .ep-thumb img { transform: scale(1.05); }
+    .ep-card:hover .ep-thumb img {
+      transform: scale(1.06);
+      filter: brightness(0.75);
+    }
 
-    /* Overlay hover */
-    .ep-overlay {
+    /* Gradiente sobre la imagen */
+    .ep-thumb-gradient {
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.28s;
-    }
-    .ep-card:hover .ep-overlay { background: rgba(0,0,0,0.45); }
-
-    /* Botón play — círculo verde CSS puro */
-    .ep-play {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--green);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transform: scale(0.65);
-      transition: opacity 0.25s, transform 0.25s;
-      box-shadow: 0 0 30px rgba(141,198,63,0.5);
-    }
-    .ep-card:hover .ep-play { opacity: 1; transform: scale(1); }
-    /* Triángulo dentro del círculo */
-    .ep-play::after {
-      content: '';
-      width: 0; height: 0;
-      border-style: solid;
-      border-width: 9px 0 9px 17px;
-      border-color: transparent transparent transparent #000;
-      margin-left: 4px;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 30%,
+        rgba(0,0,0,0.85) 100%
+      );
     }
 
     /* Badge categoría */
     .ep-cat {
       position: absolute;
-      top: 0.6rem; left: 0.6rem;
+      top: 0.65rem; left: 0.65rem;
       background: var(--green);
       color: #000;
-      font-family: var(--font-body);
-      font-size: 0.48rem;
-      font-weight: 800;
+      font-size: 0.46rem;
+      font-weight: 900;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      padding: 0.22rem 0.6rem;
+      padding: 0.2rem 0.6rem;
       border-radius: 3px;
-      z-index: 2;
+      z-index: 3;
     }
 
     /* Badge número */
     .ep-num {
       position: absolute;
-      top: 0.6rem; right: 0.6rem;
-      background: rgba(0,0,0,0.7);
+      top: 0.65rem; right: 0.65rem;
+      background: rgba(0,0,0,0.72);
       backdrop-filter: blur(6px);
-      color: var(--white);
+      color: #fff;
       font-family: var(--font-mono);
-      font-size: 0.48rem;
+      font-size: 0.46rem;
       font-weight: 700;
       letter-spacing: 0.1em;
-      padding: 0.22rem 0.55rem;
+      padding: 0.2rem 0.55rem;
       border-radius: 3px;
       border: 1px solid rgba(255,255,255,0.08);
-      z-index: 2;
+      z-index: 3;
     }
 
-    /* ── Cuerpo de la card ── */
-    .ep-body {
-      padding: 1.1rem 1.15rem 1.2rem;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      gap: 0.3rem;
-    }
-
-    /* Eyebrow — empresa en verde pequeño */
-    .ep-eyebrow {
-      font-family: var(--font-body);
-      font-size: 0.58rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
+    /* Badge de estado */
+    .ep-status-badge {
+      position: absolute;
+      bottom: 0.65rem; left: 0.65rem;
+      font-size: 0.44rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--green);
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      z-index: 3;
+    }
+    .ep-status-editing    { background: #f59e0b; color: #000; }
+    .ep-status-soon       { background: #333; color: #999; border: 1px solid #444; }
+    .ep-status-published  { display: none; }
+
+    /* Overlay "coming soon" */
+    .ep-card.ep-soon .ep-thumb img { filter: grayscale(80%) brightness(0.5); }
+    .ep-card.ep-soon .ep-thumb img:hover { transform: none; filter: grayscale(80%) brightness(0.5); }
+
+    /* Botones hover — aparecen sobre la imagen */
+    .ep-hover-btns {
+      position: absolute;
+      bottom: 0.8rem; right: 0.65rem;
+      display: flex;
+      gap: 0.4rem;
+      z-index: 4;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.25s, transform 0.25s;
+    }
+    .ep-card:hover .ep-hover-btns { opacity: 1; transform: translateY(0); }
+
+    /* En móvil siempre visibles */
+    @media (max-width: 699px) {
+      .ep-hover-btns { opacity: 1; transform: translateY(0); }
     }
 
-    /* Título — display serif, bold, blanco */
-    .ep-titulo {
+    /* ── Botón Ver Episodio ── */
+    .ep-btn-watch {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      background: var(--green);
+      color: #000;
+      font-size: 0.55rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.5rem 0.9rem;
+      border-radius: 4px;
+      text-decoration: none;
+      border: none; cursor: pointer;
+      transition: background 0.18s;
+      white-space: nowrap;
+    }
+    .ep-btn-watch:hover { background: #9dd43f; color: #000; }
+    .ep-btn-watch::before {
+      content: '';
+      display: inline-block; width: 0; height: 0;
+      border-style: solid;
+      border-width: 4px 0 4px 8px;
+      border-color: transparent transparent transparent #000;
+      flex-shrink: 0;
+    }
+
+    /* ── Botón Información ── */
+    .ep-btn-info {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.5rem 0.9rem;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.2);
+      cursor: pointer;
+      transition: background 0.18s, border-color 0.18s;
+      white-space: nowrap;
+      background-color: rgba(0,0,0,0.55);
+    }
+    .ep-btn-info:hover {
+      background: rgba(255,255,255,0.18);
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    /* ── Info inferior siempre visible ── */
+    .ep-info {
+      padding: 0.85rem 1rem 1rem;
+      background: #111;
+      border-top: 1px solid #1e1e1e;
+    }
+    .ep-empresa-name {
       font-family: var(--font-display);
-      font-size: 1.15rem;
+      font-size: 1rem;
       font-weight: 700;
       color: var(--white);
-      line-height: 1.25;
-      margin-top: 0.1rem;
+      line-height: 1.2;
+      margin-bottom: 0.2rem;
+    }
+    .ep-person-name {
+      font-size: 0.7rem;
+      color: var(--green);
+      font-weight: 500;
     }
 
-    /* Descripción */
-    .ep-desc {
-      font-size: 0.74rem;
-      color: var(--ash);
-      line-height: 1.6;
-      margin-top: 0.2rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Separador */
-    .ep-sep {
-      width: 100%;
-      height: 1px;
-      background: var(--border);
-      margin: 0.5rem 0;
-    }
-
-    /* Contacto — texto muy discreto */
-    .ep-contact {
-      font-size: 0.63rem;
-      color: var(--muted);
-      line-height: 1.7;
-      flex: 1;
-    }
-
-    /* Botón Ver Episodio — igual que btn-primary del sitio */
-    .ep-btn {
+    /* ════════════════════════════
+       MODAL
+    ════════════════════════════ */
+    .ep-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      margin-top: 0.75rem;
-      padding: 0.75rem 1rem;
-      background: var(--green);
-      color: #000;
-      font-family: var(--font-body);
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      border-radius: 3px;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
     }
-    .ep-btn:hover {
-      background: #9dd43f;
-      transform: scale(1.02);
-      color: #000;
+    .ep-modal-overlay.open {
+      opacity: 1;
+      pointer-events: all;
     }
-    /* Triángulo play del botón */
-    .ep-btn-tri {
-      display: inline-block;
+
+    .ep-modal {
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 640px;
+      max-height: 90vh;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--green) #1a1a1a;
+      transform: translateY(20px) scale(0.97);
+      transition: transform 0.3s;
+    }
+    .ep-modal-overlay.open .ep-modal {
+      transform: translateY(0) scale(1);
+    }
+
+    /* Thumbnail del modal */
+    .ep-modal-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      border-radius: 10px 10px 0 0;
+      filter: brightness(0.85);
+    }
+
+    /* Header del modal */
+    .ep-modal-header {
+      padding: 1.5rem 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .ep-modal-badges { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .ep-modal-cat {
+      font-size: 0.52rem; font-weight: 800;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      background: var(--green); color: #000;
+      padding: 0.22rem 0.7rem; border-radius: 3px;
+    }
+    .ep-modal-ep {
+      font-family: var(--font-mono);
+      font-size: 0.52rem; font-weight: 700;
+      letter-spacing: 0.12em; color: var(--ash);
+      background: #222; padding: 0.22rem 0.7rem; border-radius: 3px;
+    }
+
+    .ep-modal-close {
+      width: 32px; height: 32px; flex-shrink: 0;
+      background: #222; border: 1px solid #333;
+      border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--ash); font-size: 1rem; line-height: 1;
+      transition: background 0.2s, color 0.2s;
+    }
+    .ep-modal-close:hover { background: #333; color: var(--white); }
+
+    /* Cuerpo del modal */
+    .ep-modal-body { padding: 0 1.5rem 1.5rem; }
+
+    .ep-modal-empresa {
+      font-family: var(--font-display);
+      font-size: 1.6rem; font-weight: 700;
+      color: var(--white); line-height: 1.15;
+      margin-bottom: 0.2rem;
+    }
+    .ep-modal-person {
+      font-size: 0.8rem; color: var(--green);
+      font-weight: 500; margin-bottom: 1rem;
+    }
+
+    .ep-modal-frase {
+      font-family: var(--font-display);
+      font-size: 1.15rem; font-weight: 400; font-style: italic;
+      color: var(--white); line-height: 1.4;
+      border-left: 3px solid var(--green);
+      padding-left: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .ep-modal-section-label {
+      font-size: 0.52rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--green); margin-bottom: 0.4rem;
+      display: block;
+    }
+    .ep-modal-text {
+      font-size: 0.82rem; color: var(--ash);
+      line-height: 1.7; margin-bottom: 1rem;
+    }
+
+    .ep-modal-divider { height: 1px; background: #222; margin: 1rem 0; }
+
+    .ep-modal-contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .ep-modal-contact-item { font-size: 0.75rem; color: var(--ash); line-height: 1.5; }
+    .ep-modal-contact-item a { color: var(--ash); text-decoration: none; transition: color 0.2s; }
+    .ep-modal-contact-item a:hover { color: var(--green); }
+    .ep-modal-contact-label {
+      font-size: 0.5rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--muted); display: block; margin-bottom: 0.15rem;
+    }
+
+    /* Botones del modal */
+    .ep-modal-actions {
+      display: flex; gap: 0.75rem; flex-wrap: wrap;
+      padding-top: 0.5rem;
+    }
+    .ep-modal-btn-primary {
+      flex: 1; min-width: 140px;
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+      background: var(--green); color: #000;
+      font-size: 0.65rem; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.8rem 1.2rem; border-radius: 6px;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .ep-modal-btn-primary:hover { background: #9dd43f; color: #000; }
+    .ep-modal-btn-primary::before {
+      content: '';
       width: 0; height: 0;
       border-style: solid;
       border-width: 5px 0 5px 9px;
       border-color: transparent transparent transparent #000;
       flex-shrink: 0;
+    }
+    .ep-modal-btn-secondary {
+      flex: 1; min-width: 140px;
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+      background: transparent;
+      border: 1px solid #333; color: var(--ash);
+      font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.8rem 1.2rem; border-radius: 6px;
+      text-decoration: none; cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .ep-modal-btn-secondary:hover { border-color: var(--green); color: var(--green); }
+
+    /* Ocultar cards filtradas */
+    .ep-card.hidden { display: none; }
+
+    /* CTA final del módulo */
+    .ep-cta-bottom {
+      margin-top: 3.5rem;
+      padding: 3rem 2rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: linear-gradient(135deg, #0d1a0d, #080808);
+      text-align: center;
+    }
+    .ep-cta-bottom p {
+      font-family: var(--font-display);
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--white);
+      margin-bottom: 1.5rem;
     }
 
 >

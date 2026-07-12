@@ -81,6 +81,14 @@
       }, msToMidnight);
     })();
 
+
+    /* Soporte teclado para ep-cards */
+    document.querySelectorAll('.ep-card[role="button"]').forEach(card => {
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+      });
+    });
+
   </script>
 
   <title>Desafío 100 Empresas — Documentando el Legado de una Generación</title>
@@ -2107,157 +2115,154 @@
         <span class="eyebrow">Episodios publicados</span>
         <div class="section-header-line"></div>
       </div>
-      <p class="body-lg reveal" style="margin-bottom:2.5rem">
-        Cada historia, una lección. Cada empresario, un legado.<br>
-        Mira los primeros capítulos del Desafío directamente aquí.
+      <p class="body-lg reveal" style="margin-bottom:2rem">
+        Cada historia, una lección. Cada empresario, un legado.
+        Haz clic en cualquier episodio para verlo en YouTube.
       </p>
-
       <div class="ep-grid">
-
+        
         <!-- ══ EP 01 ══ -->
-        <div class="ep-card reveal">
-          <div class="ep-video-wrap">
-            <span class="ep-badge">EP · 01</span>
-            <iframe
-              src="https://www.youtube.com/embed/_yazppIXYVk?rel=0&modestbranding=1&color=white"
-              title="EP 01 — Dunia Rodríguez · Retryvive Counselling"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen loading="lazy">
-            </iframe>
-          </div>
-          <div class="ep-info">
-            <span class="ep-cat">Consejería · Psicoterapia</span>
-            <div class="ep-nombre">Dunia Rodríguez</div>
-            <div class="ep-empresa">Retryvive Counselling</div>
-            <p class="ep-desc-txt">Consejería profesional y psicoterapia para la comunidad latina en Canadá.</p>
-            <div class="ep-divider"></div>
-            <div class="ep-contact-list">
-              <a class="ep-clink" href="mailto:dunia@retryvive.com">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h12v9H2zM2 4l6 5 6-5"/></svg>
-                dunia@retryvive.com
-              </a>
+        <div class="ep-card reveal" onclick="window.open('https://www.youtube.com/watch?v=_yazppIXYVk','_blank')" role="button" tabindex="0" aria-label="Ver episodio 01 — Dunia Rodríguez">
+          <div class="ep-thumb-wrap">
+            <img class="ep-thumb-img"
+                 src="https://img.youtube.com/vi/_yazppIXYVk/maxresdefault.jpg"
+                 alt="EP 01 — Dunia Rodríguez · Retryvive Counselling"
+                 loading="lazy"
+                 onerror="this.onerror=null;this.src='https://img.youtube.com/vi/_yazppIXYVk/hqdefault.jpg'">
+            <div class="ep-thumb-overlay">
+              <div class="ep-play">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20"><path d="M5 4l12 6-12 6V4z"/></svg>
+              </div>
             </div>
+            <span class="ep-num-badge">EP · 01</span>
+            <span class="ep-cat-badge">Consejería</span>
+          </div>
+          <div class="ep-body">
+            <div class="ep-titulo">Dunia Rodríguez</div>
+            <div class="ep-empresa-tag">Retryvive Counselling</div>
+            <p class="ep-desc-short">Consejería profesional y psicoterapia para la comunidad latina en Canadá.</p>
+            <div class="ep-contacts-row">
+              <a class="ep-contact-item" href="mailto:dunia@retryvive.com"><span class="ep-ico"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="3" width="12" height="9" rx="1"/><path d="M1 3l6 5 6-5"/></svg></span> dunia@retryvive.com</a>
+            </div>
+            <a class="ep-btn" href="https://www.youtube.com/watch?v=_yazppIXYVk" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <svg class="ep-btn-icon" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3 2l9 5-9 5V2z"/></svg> Ver Episodio Completo
+            </a>
           </div>
         </div>
-
         <!-- ══ EP 02 ══ -->
-        <div class="ep-card reveal">
-          <div class="ep-video-wrap">
-            <span class="ep-badge">EP · 02</span>
-            <iframe
-              src="https://www.youtube.com/embed/Lfx5p_SLl-4?rel=0&modestbranding=1&color=white"
-              title="EP 02 — Carmen Helena Montoya Sánchez · CS Consulting Canada"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen loading="lazy">
-            </iframe>
-          </div>
-          <div class="ep-info">
-            <span class="ep-cat">Consultoría · Inmigración</span>
-            <div class="ep-nombre">Carmen Helena Montoya Sánchez</div>
-            <div class="ep-empresa">CS Consulting Canada</div>
-            <p class="ep-desc-txt">Asesoría profesional en procesos migratorios para latinos en Canadá.</p>
-            <div class="ep-divider"></div>
-            <div class="ep-contact-list">
-              <a class="ep-clink" href="mailto:carmen33montoya@gmail.com">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h12v9H2zM2 4l6 5 6-5"/></svg>
-                carmen33montoya@gmail.com
-              </a>
+        <div class="ep-card reveal" onclick="window.open('https://www.youtube.com/watch?v=Lfx5p_SLl-4','_blank')" role="button" tabindex="0" aria-label="Ver episodio 02 — Carmen Helena Montoya Sánchez">
+          <div class="ep-thumb-wrap">
+            <img class="ep-thumb-img"
+                 src="https://img.youtube.com/vi/Lfx5p_SLl-4/maxresdefault.jpg"
+                 alt="EP 02 — Carmen Helena Montoya Sánchez · CS Consulting Canada"
+                 loading="lazy"
+                 onerror="this.onerror=null;this.src='https://img.youtube.com/vi/Lfx5p_SLl-4/hqdefault.jpg'">
+            <div class="ep-thumb-overlay">
+              <div class="ep-play">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20"><path d="M5 4l12 6-12 6V4z"/></svg>
+              </div>
             </div>
+            <span class="ep-num-badge">EP · 02</span>
+            <span class="ep-cat-badge">Inmigración</span>
+          </div>
+          <div class="ep-body">
+            <div class="ep-titulo">Carmen Helena Montoya Sánchez</div>
+            <div class="ep-empresa-tag">CS Consulting Canada</div>
+            <p class="ep-desc-short">Asesoría profesional en procesos migratorios para latinos en Canadá.</p>
+            <div class="ep-contacts-row">
+              <a class="ep-contact-item" href="mailto:carmen33montoya@gmail.com"><span class="ep-ico"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="3" width="12" height="9" rx="1"/><path d="M1 3l6 5 6-5"/></svg></span> carmen33montoya@gmail.com</a>
+            </div>
+            <a class="ep-btn" href="https://www.youtube.com/watch?v=Lfx5p_SLl-4" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <svg class="ep-btn-icon" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3 2l9 5-9 5V2z"/></svg> Ver Episodio Completo
+            </a>
           </div>
         </div>
-
         <!-- ══ EP 03 ══ -->
-        <div class="ep-card reveal">
-          <div class="ep-video-wrap">
-            <span class="ep-badge">EP · 03</span>
-            <iframe
-              src="https://www.youtube.com/embed/xJaXI3r83sA?rel=0&modestbranding=1&color=white"
-              title="EP 03 — Carlos D. Castillo · Roca Financial Group"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen loading="lazy">
-            </iframe>
-          </div>
-          <div class="ep-info">
-            <span class="ep-cat">Finanzas · Seguros de Vida</span>
-            <div class="ep-nombre">Carlos D. Castillo</div>
-            <div class="ep-empresa">Roca Financial Group</div>
-            <p class="ep-desc-txt">Planificación financiera y seguros de vida para familias latinas en Canadá.</p>
-            <div class="ep-divider"></div>
-            <div class="ep-contact-list">
-              <a class="ep-clink" href="mailto:advice@carlosdar.io">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h12v9H2zM2 4l6 5 6-5"/></svg>
-                advice@carlosdar.io
-              </a>
-              <a class="ep-clink" href="https://www.facebook.com/CarlosDCastilloSegurosyalgomas" target="_blank" rel="noopener">
-                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M14 1H2a1 1 0 00-1 1v12a1 1 0 001 1h6.5v-5H7V8h1.5V6.5A2.5 2.5 0 0111 4h1.5v2H11a.5.5 0 00-.5.5V8H13l-.5 2H10.5v5H14a1 1 0 001-1V2a1 1 0 00-1-1z"/></svg>
-                Facebook · Carlos D. Castillo
-              </a>
+        <div class="ep-card reveal" onclick="window.open('https://www.youtube.com/watch?v=xJaXI3r83sA','_blank')" role="button" tabindex="0" aria-label="Ver episodio 03 — Carlos D. Castillo">
+          <div class="ep-thumb-wrap">
+            <img class="ep-thumb-img"
+                 src="https://img.youtube.com/vi/xJaXI3r83sA/maxresdefault.jpg"
+                 alt="EP 03 — Carlos D. Castillo · Roca Financial Group"
+                 loading="lazy"
+                 onerror="this.onerror=null;this.src='https://img.youtube.com/vi/xJaXI3r83sA/hqdefault.jpg'">
+            <div class="ep-thumb-overlay">
+              <div class="ep-play">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20"><path d="M5 4l12 6-12 6V4z"/></svg>
+              </div>
             </div>
+            <span class="ep-num-badge">EP · 03</span>
+            <span class="ep-cat-badge">Finanzas</span>
+          </div>
+          <div class="ep-body">
+            <div class="ep-titulo">Carlos D. Castillo</div>
+            <div class="ep-empresa-tag">Roca Financial Group</div>
+            <p class="ep-desc-short">Planificación financiera y seguros de vida para familias latinas en Canadá.</p>
+            <div class="ep-contacts-row">
+              <a class="ep-contact-item" href="mailto:advice@carlosdar.io"><span class="ep-ico"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="3" width="12" height="9" rx="1"/><path d="M1 3l6 5 6-5"/></svg></span> advice@carlosdar.io</a><a class="ep-contact-item" href="https://www.facebook.com/CarlosDCastilloSegurosyalgomas" target="_blank" rel="noopener"><span class="ep-ico"><svg viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 1H2a1 1 0 00-1 1v10a1 1 0 001 1h5.5V9H6V7h1.5V5.8C7.5 4.3 8.4 3.5 9.7 3.5H11V5H9.8c-.4 0-.5.2-.5.5V7H11l-.3 2H9.3v4H12a1 1 0 001-1V2a1 1 0 00-1-1z"/></svg></span> Facebook · Carlos D. Castillo</a>
+            </div>
+            <a class="ep-btn" href="https://www.youtube.com/watch?v=xJaXI3r83sA" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <svg class="ep-btn-icon" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3 2l9 5-9 5V2z"/></svg> Ver Episodio Completo
+            </a>
           </div>
         </div>
-
         <!-- ══ EP 04 ══ -->
-        <div class="ep-card reveal">
-          <div class="ep-video-wrap">
-            <span class="ep-badge">EP · 04</span>
-            <iframe
-              src="https://www.youtube.com/embed/kS9Ff6J8i_s?rel=0&modestbranding=1&color=white"
-              title="EP 04 — Hugo Raúl Morales Vega · La Costeñita Latin Market Food"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen loading="lazy">
-            </iframe>
-          </div>
-          <div class="ep-info">
-            <span class="ep-cat">Productos Latinos · Mercado</span>
-            <div class="ep-nombre">Hugo Raúl Morales Vega</div>
-            <div class="ep-empresa">La Costeñita Latin Market Food</div>
-            <p class="ep-desc-txt">Fabricación y venta de productos latinos auténticos para la comunidad hispana en Canadá.</p>
-            <div class="ep-divider"></div>
-            <div class="ep-contact-list">
-              <a class="ep-clink" href="tel:+18254885472">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 2h3l1.5 3.5L6 7a10 10 0 004 4l1.5-1.5L15 11v3a1 1 0 01-1 1A13 13 0 012 2a1 1 0 011-1z"/></svg>
-                +1 (825) 488-5472
-              </a>
+        <div class="ep-card reveal" onclick="window.open('https://www.youtube.com/watch?v=kS9Ff6J8i_s','_blank')" role="button" tabindex="0" aria-label="Ver episodio 04 — Hugo Raúl Morales Vega">
+          <div class="ep-thumb-wrap">
+            <img class="ep-thumb-img"
+                 src="https://img.youtube.com/vi/kS9Ff6J8i_s/maxresdefault.jpg"
+                 alt="EP 04 — Hugo Raúl Morales Vega · La Costeñita Latin Market Food"
+                 loading="lazy"
+                 onerror="this.onerror=null;this.src='https://img.youtube.com/vi/kS9Ff6J8i_s/hqdefault.jpg'">
+            <div class="ep-thumb-overlay">
+              <div class="ep-play">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20"><path d="M5 4l12 6-12 6V4z"/></svg>
+              </div>
             </div>
+            <span class="ep-num-badge">EP · 04</span>
+            <span class="ep-cat-badge">Mercado Latino</span>
+          </div>
+          <div class="ep-body">
+            <div class="ep-titulo">Hugo Raúl Morales Vega</div>
+            <div class="ep-empresa-tag">La Costeñita Latin Market Food</div>
+            <p class="ep-desc-short">Fabricación y venta de productos latinos auténticos para la comunidad hispana en Canadá.</p>
+            <div class="ep-contacts-row">
+              <a class="ep-contact-item" href="tel:+18254885472"><span class="ep-ico"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" xmlns="http://www.w3.org/2000/svg"><path d="M2 2h3l1 3-1.5 1a9 9 0 003.5 3.5L9 8l3 1v3a1 1 0 01-1 1A12 12 0 011 2.5 1 1 0 012 2z"/></svg></span> +1 (825) 488-5472</a>
+            </div>
+            <a class="ep-btn" href="https://www.youtube.com/watch?v=kS9Ff6J8i_s" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <svg class="ep-btn-icon" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3 2l9 5-9 5V2z"/></svg> Ver Episodio Completo
+            </a>
           </div>
         </div>
-
         <!-- ══ EP 05 ══ -->
-        <div class="ep-card reveal">
-          <div class="ep-video-wrap">
-            <span class="ep-badge">EP · 05</span>
-            <iframe
-              src="https://www.youtube.com/embed/tLNUf_SkAD0?rel=0&modestbranding=1&color=white"
-              title="EP 05 — Milena Bolaños · Peluquería Infantil"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen loading="lazy">
-            </iframe>
-          </div>
-          <div class="ep-info">
-            <span class="ep-cat">Estilismo Infantil · Necesidades Especiales</span>
-            <div class="ep-nombre">Milena Bolaños</div>
-            <div class="ep-empresa">Milena Children Stylist</div>
-            <p class="ep-desc-txt">Especialista en corte para niños y atención a niños con necesidades especiales en Canadá.</p>
-            <div class="ep-divider"></div>
-            <div class="ep-contact-list">
-              <a class="ep-clink" href="tel:4036072608">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 2h3l1.5 3.5L6 7a10 10 0 004 4l1.5-1.5L15 11v3a1 1 0 01-1 1A13 13 0 012 2a1 1 0 011-1z"/></svg>
-                403-607-2608
-              </a>
-              <a class="ep-clink" href="https://instagram.com/milenachildrensstylist" target="_blank" rel="noopener">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="3"/><circle cx="8" cy="8" r="3"/><circle cx="11.2" cy="4.8" r="0.8" fill="currentColor" stroke="none"/></svg>
-                @milenachildrensstylist
-              </a>
-              <a class="ep-clink" href="https://tiktok.com/@MilenaChildrenStylist" target="_blank" rel="noopener">
-                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.5 4.5a3.5 3.5 0 01-2.7-3h-2.3v9.2a1.7 1.7 0 01-1.7 1.6 1.7 1.7 0 01-1.7-1.7 1.7 1.7 0 011.7-1.7h.4V6.6h-.4a4 4 0 00-4 4 4 4 0 004 4 4 4 0 004-4V6a6 6 0 003.5 1.1V4.8a3.5 3.5 0 01-.8-.3z"/></svg>
-                @MilenaChildrenStylist
-              </a>
+        <div class="ep-card reveal" onclick="window.open('https://www.youtube.com/watch?v=tLNUf_SkAD0','_blank')" role="button" tabindex="0" aria-label="Ver episodio 05 — Milena Bolaños">
+          <div class="ep-thumb-wrap">
+            <img class="ep-thumb-img"
+                 src="https://img.youtube.com/vi/tLNUf_SkAD0/maxresdefault.jpg"
+                 alt="EP 05 — Milena Bolaños · Milena Children Stylist"
+                 loading="lazy"
+                 onerror="this.onerror=null;this.src='https://img.youtube.com/vi/tLNUf_SkAD0/hqdefault.jpg'">
+            <div class="ep-thumb-overlay">
+              <div class="ep-play">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20"><path d="M5 4l12 6-12 6V4z"/></svg>
+              </div>
             </div>
+            <span class="ep-num-badge">EP · 05</span>
+            <span class="ep-cat-badge">Estilismo Infantil</span>
+          </div>
+          <div class="ep-body">
+            <div class="ep-titulo">Milena Bolaños</div>
+            <div class="ep-empresa-tag">Milena Children Stylist</div>
+            <p class="ep-desc-short">Especialista en corte para niños y atención a menores con necesidades especiales en Canadá.</p>
+            <div class="ep-contacts-row">
+              <a class="ep-contact-item" href="tel:4036072608"><span class="ep-ico"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" xmlns="http://www.w3.org/2000/svg"><path d="M2 2h3l1 3-1.5 1a9 9 0 003.5 3.5L9 8l3 1v3a1 1 0 01-1 1A12 12 0 011 2.5 1 1 0 012 2z"/></svg></span> 403-607-2608</a><a class="ep-contact-item" href="https://instagram.com/milenachildrensstylist" target="_blank" rel="noopener"><span class="ep-ico"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="10" height="10" rx="3"/><circle cx="7" cy="7" r="2.5"/><circle cx="10" cy="4" r="0.6" fill="currentColor" stroke="none"/></svg></span> @milenachildrensstylist</a><a class="ep-contact-item" href="https://tiktok.com/@MilenaChildrenStylist" target="_blank" rel="noopener"><span class="ep-ico"><svg viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 3.9a3 3 0 01-2.3-2.6H7v8a1.5 1.5 0 01-1.5 1.4A1.5 1.5 0 014 9.3a1.5 1.5 0 011.5-1.5h.3V5.7h-.3A3.5 3.5 0 002 9.3a3.5 3.5 0 003.5 3.5A3.5 3.5 0 009 9.3V5.2a5.3 5.3 0 003 .9V4a3 3 0 01-.5-.1z"/></svg></span> @MilenaChildrenStylist</a>
+            </div>
+            <a class="ep-btn" href="https://www.youtube.com/watch?v=tLNUf_SkAD0" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+              <svg class="ep-btn-icon" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3 2l9 5-9 5V2z"/></svg> Ver Episodio Completo
+            </a>
           </div>
         </div>
-
-      </div><!-- /.ep-grid -->
-    </div><!-- /.container -->
+      </div>
+    </div>
   </section>
 
     <!-- ═══════════════════ AGENDA ═══════════════════ -->
@@ -2930,116 +2935,246 @@
       }, msToMidnight);
     })();
 
+
+    /* Soporte teclado para ep-cards */
+    document.querySelectorAll('.ep-card[role="button"]').forEach(card => {
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+      });
+    });
+
   </script>
 </body>
 </html>
-    /* ─── EPISODE CARDS — Netflix Style ─────────────────── */
-    #episodios { background: #0a0a0a; }
+    /* ─── EPISODE CARDS — Estilo Podcast ──────────────── */
+    #episodios { background: #0d0d0d; }
 
     .ep-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
     }
-    @media (min-width: 700px)  { .ep-grid { grid-template-columns: 1fr 1fr; } }
-    @media (min-width: 1060px) { .ep-grid { grid-template-columns: 1fr 1fr 1fr; } }
 
     .ep-card {
-      background: #111;
-      border: 1px solid #1e1e1e;
-      border-radius: 6px;
+      background: #161616;
+      border-radius: 8px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: transform 0.3s cubic-bezier(0.4,0,0.2,1),
-                  box-shadow 0.3s, border-color 0.3s;
+      border: 1px solid #222;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
     }
     .ep-card:hover {
-      transform: translateY(-6px) scale(1.01);
-      border-color: rgba(141,198,63,0.4);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(141,198,63,0.1);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+      border-color: rgba(141,198,63,0.35);
     }
 
-    /* Contenedor del iframe 16:9 */
-    .ep-video-wrap {
+    /* ── Thumbnail ── */
+    .ep-thumb-wrap {
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 9;
-      background: #000;
       overflow: hidden;
+      background: #111;
     }
-    .ep-video-wrap iframe {
-      position: absolute;
-      inset: 0;
+    .ep-thumb-img {
       width: 100%;
       height: 100%;
-      border: none;
+      object-fit: cover;
       display: block;
+      transition: transform 0.35s ease;
+    }
+    .ep-card:hover .ep-thumb-img { transform: scale(1.04); }
+
+    /* Overlay oscuro en hover */
+    .ep-thumb-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.25s;
+    }
+    .ep-card:hover .ep-thumb-overlay { background: rgba(0,0,0,0.4); }
+
+    /* Botón play circular */
+    .ep-play {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.25s, transform 0.25s;
+      flex-shrink: 0;
+    }
+    .ep-card:hover .ep-play { opacity: 1; transform: scale(1); }
+    .ep-play svg {
+      width: 20px !important;
+      height: 20px !important;
+      color: #000;
+      margin-left: 3px;
+      flex-shrink: 0;
     }
 
-    /* Badge de número */
-    .ep-badge {
+    /* Badge número */
+    .ep-num-badge {
       position: absolute;
-      top: 0.6rem; left: 0.6rem;
-      z-index: 2;
+      top: 0.6rem;
+      left: 0.6rem;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(4px);
+      color: var(--green);
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 0.2rem 0.55rem;
+      border-radius: 3px;
+      border: 1px solid rgba(141,198,63,0.3);
+    }
+
+    /* Badge categoría */
+    .ep-cat-badge {
+      position: absolute;
+      bottom: 0.6rem;
+      left: 0.6rem;
       background: var(--green);
       color: #000;
-      font-family: var(--font-mono);
-      font-size: 0.55rem;
+      font-size: 0.52rem;
       font-weight: 700;
       letter-spacing: 0.12em;
-      padding: 0.25rem 0.6rem;
-      border-radius: 2px;
-      pointer-events: none;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 3px;
     }
 
-    /* Info bajo el video */
-    .ep-info {
-      padding: 1.1rem 1.25rem 1.25rem;
+    /* ── Info ── */
+    .ep-body {
+      padding: 1rem 1.1rem 1.1rem;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.3rem;
       flex: 1;
     }
-
-    .ep-cat {
-      font-size: 0.56rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--green);
-    }
-    .ep-nombre {
+    .ep-titulo {
       font-family: var(--font-display);
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: var(--white);
-      line-height: 1.2;
+      line-height: 1.25;
     }
-    .ep-empresa {
-      font-size: 0.78rem;
-      color: var(--ash);
-      margin-bottom: 0.25rem;
+    .ep-empresa-tag {
+      font-size: 0.72rem;
+      color: var(--green);
+      font-weight: 500;
     }
-    .ep-desc-txt {
-      font-size: 0.78rem;
+    .ep-desc-short {
+      font-size: 0.75rem;
       color: var(--muted);
-      line-height: 1.65;
+      line-height: 1.6;
+      margin-top: 0.1rem;
     }
 
     /* Contactos */
-    .ep-divider { width: 100%; height: 1px; background: #1e1e1e; margin: 0.5rem 0; }
-
-    .ep-contact-list { display: flex; flex-direction: column; gap: 0.35rem; }
-    .ep-clink {
-      display: flex; align-items: center; gap: 0.5rem;
-      font-size: 0.72rem; color: var(--ash);
+    .ep-contacts-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-top: 0.5rem;
+      padding-top: 0.6rem;
+      border-top: 1px solid #222;
+    }
+    .ep-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      color: #777;
       text-decoration: none;
       transition: color 0.2s;
-      word-break: break-all;
+      line-height: 1.3;
     }
-    .ep-clink:hover { color: var(--green); }
-    .ep-clink svg { width: 13px; height: 13px; flex-shrink: 0; color: var(--green); opacity: 0.8; }
+    .ep-contact-item:hover { color: var(--green); }
+
+    /* ícono dentro de contacto — tamaño fijo crítico */
+    .ep-ico {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px !important;
+      height: 14px !important;
+      min-width: 14px;
+      flex-shrink: 0;
+    }
+    .ep-ico svg {
+      width: 14px !important;
+      height: 14px !important;
+      display: block;
+    }
+
+    /* Botón ver episodio */
+    .ep-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+      padding: 0.65rem 1rem;
+      background: rgba(141,198,63,0.1);
+      border: 1px solid rgba(141,198,63,0.25);
+      border-radius: 4px;
+      color: var(--green);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: background 0.2s, border-color 0.2s;
+      text-decoration: none;
+    }
+    .ep-btn:hover {
+      background: rgba(141,198,63,0.18);
+      border-color: var(--green);
+    }
+    .ep-btn-icon {
+      width: 14px !important;
+      height: 14px !important;
+      flex-shrink: 0;
+    }
+
+    /* ─── DAY COUNTER STRIP ─────────────────────────────── */
+    #day-counter {
+      background: #050505;
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 0;
+    }
+    .day-counter-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .day-counter-item { display: flex; align-items: center; gap: 0.5rem; }
+    .day-counter-label {
+      font-size: 0.55rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .day-counter-val {
+      font-family: var(--font-mono);
+      font-size: 0.82rem; font-weight: 700;
+      color: var(--green);
+    }
+    .day-counter-sep { width: 1px; height: 16px; background: var(--border); }
 
   </style>
 </head>
@@ -3612,199 +3747,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════ EPISODIOS ═══════════════════ -->
-  <section id="episodios">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="eyebrow">Episodios publicados</span>
-        <div class="section-header-line"></div>
-      </div>
-      <p class="body-lg reveal" style="margin-bottom:2.5rem">Cada historia, una lección. Cada empresario, un legado. Escucha los primeros capítulos del Desafío.</p>
-
-      <div class="ep-grid">
-
-        <!-- EP 01 -->
-        <div class="ep-card reveal">
-          <div class="ep-thumb-wrap">
-            <img class="ep-thumb" src="https://img.youtube.com/vi/_yazppIXYVk/maxresdefault.jpg"
-                 alt="Dunia Rodríguez — Retryvive Counselling" loading="lazy"
-                 onerror="this.src='https://img.youtube.com/vi/_yazppIXYVk/hqdefault.jpg'">
-            <div class="ep-thumb-overlay">
-              <a href="https://www.youtube.com/watch?v=_yazppIXYVk" target="_blank" rel="noopener" aria-label="Ver episodio">
-                <div class="ep-play-btn">
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path d="M6 4l12 6-12 6V4z"/></svg>
-                </div>
-              </a>
-            </div>
-            <span class="ep-num-badge">EP · 01</span>
-          </div>
-          <div class="ep-body">
-            <span class="ep-category">Consejería y Psicoterapia</span>
-            <div class="ep-name-big">Dunia Rodríguez</div>
-            <div class="ep-company-sm">Retryvive Counselling</div>
-            <p class="ep-desc">Consejería profesional y psicoterapia para la comunidad latina en Canadá.</p>
-            <div class="ep-contacts">
-              <div class="ep-contact-row">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h12v9H2zM2 4l6 5 6-5"/></svg>
-                <a href="mailto:dunia@retryvive.com">dunia@retryvive.com</a>
-              </div>
-            </div>
-            <a href="https://www.youtube.com/watch?v=_yazppIXYVk" target="_blank" rel="noopener" class="ep-watch-btn">
-              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M5 3l10 5-10 5V3z"/></svg>
-              Ver episodio completo
-            </a>
-          </div>
-        </div>
-
-        <!-- EP 02 -->
-        <div class="ep-card reveal">
-          <div class="ep-thumb-wrap">
-            <img class="ep-thumb" src="https://img.youtube.com/vi/Lfx5p_SLl-4/maxresdefault.jpg"
-                 alt="Carmen Helena Montoya Sánchez — CS Consulting Canada" loading="lazy"
-                 onerror="this.src='https://img.youtube.com/vi/Lfx5p_SLl-4/hqdefault.jpg'">
-            <div class="ep-thumb-overlay">
-              <a href="https://www.youtube.com/watch?v=Lfx5p_SLl-4" target="_blank" rel="noopener" aria-label="Ver episodio">
-                <div class="ep-play-btn">
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path d="M6 4l12 6-12 6V4z"/></svg>
-                </div>
-              </a>
-            </div>
-            <span class="ep-num-badge">EP · 02</span>
-          </div>
-          <div class="ep-body">
-            <span class="ep-category">Consultoría en Inmigración</span>
-            <div class="ep-name-big">Carmen Helena Montoya Sánchez</div>
-            <div class="ep-company-sm">CS Consulting Canada</div>
-            <p class="ep-desc">Asesoría profesional en procesos migratorios para la comunidad latina en Canadá.</p>
-            <div class="ep-contacts">
-              <div class="ep-contact-row">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h12v9H2zM2 4l6 5 6-5"/></svg>
-                <a href="mailto:carmen33montoya@gmail.com">carmen33montoya@gmail.com</a>
-              </div>
-            </div>
-            <a href="https://www.youtube.com/watch?v=Lfx5p_SLl-4" target="_blank" rel="noopener" class="ep-watch-btn">
-              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M5 3l10 5-10 5V3z"/></svg>
-              Ver episodio completo
-            </a>
-          </div>
-        </div>
-
-        <!-- EP 03 -->
-        <div class="ep-card reveal">
-          <div class="ep-thumb-wrap">
-            <img class="ep-thumb" src="https://img.youtube.com/vi/xJaXI3r83sA/maxresdefault.jpg"
-                 alt="Carlos D. Castillo — Roca Financial Group" loading="lazy"
-                 onerror="this.src='https://img.youtube.com/vi/xJaXI3r83sA/hqdefault.jpg'">
-            <div class="ep-thumb-overlay">
-              <a href="https://www.youtube.com/watch?v=xJaXI3r83sA" target="_blank" rel="noopener" aria-label="Ver episodio">
-                <div class="ep-play-btn">
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path d="M6 4l12 6-12 6V4z"/></svg>
-                </div>
-              </a>
-            </div>
-            <span class="ep-num-badge">EP · 03</span>
-          </div>
-          <div class="ep-body">
-            <span class="ep-category">Protección Financiera · Seguros de Vida</span>
-            <div class="ep-name-big">Carlos D. Castillo</div>
-            <div class="ep-company-sm">Roca Financial Group</div>
-            <p class="ep-desc">Planificación financiera y seguros de vida para familias latinas en Canadá.</p>
-            <div class="ep-contacts">
-              <div class="ep-contact-row">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h12v9H2zM2 4l6 5 6-5"/></svg>
-                <a href="mailto:advice@carlosdar.io">advice@carlosdar.io</a>
-              </div>
-              <div class="ep-contact-row">
-                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M16 8.05A8 8 0 102.08 13H1v1h2v-1a8 8 0 0013-4.95zM8 15A7 7 0 118 1a7 7 0 010 14z"/><path d="M7 6h2v5H7zm0-3h2v2H7z"/></svg>
-                <a href="https://www.facebook.com/CarlosDCastilloSegurosyalgomas" target="_blank" rel="noopener">Facebook</a>
-              </div>
-            </div>
-            <a href="https://www.youtube.com/watch?v=xJaXI3r83sA" target="_blank" rel="noopener" class="ep-watch-btn">
-              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M5 3l10 5-10 5V3z"/></svg>
-              Ver episodio completo
-            </a>
-          </div>
-        </div>
-
-        <!-- EP 04 -->
-        <div class="ep-card reveal">
-          <div class="ep-thumb-wrap">
-            <img class="ep-thumb" src="https://img.youtube.com/vi/kS9Ff6J8i_s/maxresdefault.jpg"
-                 alt="Hugo Raúl Morales Vega — La Costeñita Latin Market Food" loading="lazy"
-                 onerror="this.src='https://img.youtube.com/vi/kS9Ff6J8i_s/hqdefault.jpg'">
-            <div class="ep-thumb-overlay">
-              <a href="https://www.youtube.com/watch?v=kS9Ff6J8i_s" target="_blank" rel="noopener" aria-label="Ver episodio">
-                <div class="ep-play-btn">
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path d="M6 4l12 6-12 6V4z"/></svg>
-                </div>
-              </a>
-            </div>
-            <span class="ep-num-badge">EP · 04</span>
-          </div>
-          <div class="ep-body">
-            <span class="ep-category">Productos Latinos · Mercado</span>
-            <div class="ep-name-big">Hugo Raúl Morales Vega</div>
-            <div class="ep-company-sm">La Costeñita Latin Market Food</div>
-            <p class="ep-desc">Fabricación y venta de productos latinos auténticos para la comunidad hispana en Canadá.</p>
-            <div class="ep-contacts">
-              <div class="ep-contact-row">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h10v10H3zM6 3v-.5a1.5 1.5 0 013 0V3M6 8h4M8 6v4"/></svg>
-                <a href="tel:+18254885472">+1 (825) 488-5472</a>
-              </div>
-            </div>
-            <a href="https://www.youtube.com/watch?v=kS9Ff6J8i_s" target="_blank" rel="noopener" class="ep-watch-btn">
-              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M5 3l10 5-10 5V3z"/></svg>
-              Ver episodio completo
-            </a>
-          </div>
-        </div>
-
-        <!-- EP 05 -->
-        <div class="ep-card reveal">
-          <div class="ep-thumb-wrap">
-            <img class="ep-thumb" src="https://img.youtube.com/vi/tLNUf_SkAD0/maxresdefault.jpg"
-                 alt="Milena Bolaños — Peluquería Infantil" loading="lazy"
-                 onerror="this.src='https://img.youtube.com/vi/tLNUf_SkAD0/hqdefault.jpg'">
-            <div class="ep-thumb-overlay">
-              <a href="https://www.youtube.com/watch?v=tLNUf_SkAD0" target="_blank" rel="noopener" aria-label="Ver episodio">
-                <div class="ep-play-btn">
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path d="M6 4l12 6-12 6V4z"/></svg>
-                </div>
-              </a>
-            </div>
-            <span class="ep-num-badge">EP · 05</span>
-          </div>
-          <div class="ep-body">
-            <span class="ep-category">Estilismo Infantil · Necesidades Especiales</span>
-            <div class="ep-name-big">Milena Bolaños</div>
-            <div class="ep-company-sm">Milena Children Stylist</div>
-            <p class="ep-desc">Especialista en corte para niños y atención a niños con necesidades especiales en Canadá.</p>
-            <div class="ep-contacts">
-              <div class="ep-contact-row">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h10v10H3zM6 3v-.5a1.5 1.5 0 013 0V3M6 8h4M8 6v4"/></svg>
-                <a href="tel:4036072608">403-607-2608</a>
-              </div>
-              <div class="ep-contact-row">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="3"/><circle cx="8" cy="8" r="3"/><circle cx="11.5" cy="4.5" r="0.75" fill="currentColor" stroke="none"/></svg>
-                <a href="https://instagram.com/milenachildrensstylist" target="_blank" rel="noopener">@milenachildrensstylist</a>
-              </div>
-              <div class="ep-contact-row">
-                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M12.53 4.46a3.22 3.22 0 01-2.52-2.84V1H7.73v9.11a1.93 1.93 0 01-1.92 1.67 1.93 1.93 0 01-1.93-1.93 1.93 1.93 0 011.93-1.93c.19 0 .36.03.53.07V5.35a4.24 4.24 0 00-.53-.04 4.23 4.23 0 00-4.22 4.23 4.23 4.23 0 004.22 4.22 4.23 4.23 0 004.22-4.22V5.21a5.45 5.45 0 003.19 1.01V3.9a3.24 3.24 0 01-.68-.11z"/></svg>
-                <a href="https://tiktok.com/@MilenaChildrenStylist" target="_blank" rel="noopener">@MilenaChildrenStylist</a>
-              </div>
-            </div>
-            <a href="https://www.youtube.com/watch?v=tLNUf_SkAD0" target="_blank" rel="noopener" class="ep-watch-btn">
-              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M5 3l10 5-10 5V3z"/></svg>
-              Ver episodio completo
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-    <!-- ═══════════════════ AGENDA ═══════════════════ -->
+  <!-- ═══════════════════ AGENDA ═══════════════════ -->
   <!--
     ╔══════════════════════════════════════════════════╗
     ║  ACTUALIZAR AGENDA                               ║
@@ -4473,6 +4416,14 @@
         setInterval(updateDayCounter, 86400000);
       }, msToMidnight);
     })();
+
+
+    /* Soporte teclado para ep-cards */
+    document.querySelectorAll('.ep-card[role="button"]').forEach(card => {
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+      });
+    });
 
   </script>
 </body>

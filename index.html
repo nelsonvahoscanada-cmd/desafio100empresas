@@ -1997,6 +1997,117 @@
     }
     .ep-modal-btn-sec:hover { border-color: var(--green); color: var(--green); }
 
+
+    /* ─── SECCIÓN: POR QUÉ NACE ────────────────────────── */
+    #por-que-nace {
+      background: var(--black);
+      padding: 6rem 0 7rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .pqn-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* Cita principal destacada */
+    .pqn-quote-hero {
+      border-left: 3px solid var(--green);
+      padding: 1.5rem 2rem;
+      margin: 3rem 0;
+      background: rgba(141,198,63,0.03);
+      border-radius: 0 4px 4px 0;
+    }
+    .pqn-quote-hero p {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 3vw, 1.9rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.45;
+    }
+    .pqn-quote-hero cite {
+      display: block;
+      margin-top: 0.75rem;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-style: normal;
+    }
+
+    /* Párrafos del cuerpo */
+    .pqn-body p {
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
+      color: #aaaaaa;
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+    }
+    .pqn-body p:last-child { margin-bottom: 0; }
+
+    /* Frase destacada grande en medio del texto */
+    .pqn-callout {
+      margin: 3rem 0;
+      padding: 0 0 0 1.75rem;
+      border-left: 2px solid var(--green);
+    }
+    .pqn-callout p {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.35;
+      margin-bottom: 0 !important;
+    }
+
+    /* Línea separadora con punto verde */
+    .pqn-rule {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 3rem 0;
+    }
+    .pqn-rule::before, .pqn-rule::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .pqn-rule-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    /* Frase final de cierre */
+    .pqn-closing {
+      margin: 3.5rem 0 2.5rem;
+      text-align: center;
+    }
+    .pqn-closing p {
+      font-family: var(--font-display);
+      font-size: clamp(1.2rem, 3vw, 1.75rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.4;
+    }
+    .pqn-closing strong {
+      display: block;
+      font-weight: 700;
+      font-style: normal;
+      color: var(--green);
+      margin-top: 0.4rem;
+    }
+
+    /* Botón CTA */
+    .pqn-cta {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
   </style>
 </head>
 <body>
@@ -2025,6 +2136,7 @@
 
     <ul class="nav-links">
       <li><a href="#que-es">El Desafío</a></li>
+      <li><a href="#por-que-nace">Por qué nace</a></li>
       <li><a href="#episodios">Episodios</a></li><li><a href="#dias-desafio">El Reto</a></li><li><a href="#muro">Participantes</a></li>
       <li><a href="#agenda">Agenda</a></li>
       <li><a href="#el-libro">El Libro</a></li>
@@ -2044,6 +2156,7 @@
   <!-- Menú móvil -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#que-es" class="mobile-link">El Desafío</a>
+    <a href="#por-que-nace" class="mobile-link">Por qué nace</a>
     <a href="#episodios" class="mobile-link">Episodios</a>
     <a href="#muro" class="mobile-link">Participantes</a>
     <a href="#agenda" class="mobile-link">Agenda</a>
@@ -2588,6 +2701,145 @@
         </a>
       </div>
     </div>
+  </section>
+
+  <!-- ═══════════════════ POR QUÉ NACE ═══════════════════ -->
+  <section id="por-que-nace">
+    <div class="container">
+      <div class="pqn-inner">
+
+        <!-- Encabezado -->
+        <div class="section-header reveal">
+          <span class="eyebrow">El origen de la iniciativa</span>
+          <div class="section-header-line"></div>
+        </div>
+
+        <h2 class="display-lg reveal" style="margin-bottom:2.5rem">
+          ¿Por qué nace el<br>
+          <span style="color:var(--green)">Desafío 100 Empresas?</span>
+        </h2>
+
+        <!-- Cuerpo del texto -->
+        <div class="pqn-body">
+
+          <p class="reveal">
+            El Desafío 100 Empresas nace de una inconformidad, pero también de una profunda gratitud.
+            Durante años escuché a muchos inmigrantes decir que los negocios no marchan bien, que cada vez
+            es más difícil salir adelante, que el dinero no alcanza y que emprender en un país distinto al
+            nuestro puede convertirse en una lucha solitaria.
+          </p>
+
+          <p class="reveal">
+            Frente a esa realidad entendí que no quería quedarme solamente observando o escuchando las quejas.
+            Quería actuar.
+          </p>
+
+          <p class="reveal">
+            Desde que llegué a Canadá he sido bendecido en muchos aspectos de mi vida. Este país me ha brindado
+            oportunidades, aprendizajes y la posibilidad de construir un nuevo camino. Por eso tomé la decisión
+            de devolver, al menos simbólicamente, el diez por ciento de todo lo que Canadá me ha dado, poniendo
+            al servicio de la comunidad empresarial latina lo que mejor sé hacer: comunicar, conectar y contar historias.
+          </p>
+
+          <p class="reveal">
+            Decidí aportar mi experiencia, mis equipos, mis plataformas digitales, mi tiempo y mi capacidad de
+            producción para ayudar a que más empresarios latinos puedan mostrar sus productos, presentar sus
+            servicios y llegar a nuevos clientes.
+          </p>
+
+        </div>
+
+        <!-- Cita principal -->
+        <div class="pqn-quote-hero reveal">
+          <p>"Yo los entrevisto, ustedes muestran lo que hacen y juntos lo damos a conocer."</p>
+          <cite>Nelson Vahos — CEO, eRadio Global Corp.</cite>
+        </div>
+
+        <div class="pqn-body">
+
+          <p class="reveal">
+            Todo esto se realiza de manera completamente gratuita. La intención no es cobrar por contar
+            una historia. La intención es fortalecer la confianza, la visibilidad y la capacidad comercial
+            de quienes están construyendo empresa en Canadá.
+          </p>
+
+          <p class="reveal">
+            También pensé en aquellas personas que nunca han tenido la oportunidad de presentar su negocio
+            en un medio de comunicación, muchas veces porque los costos de publicidad y producción están
+            fuera de su alcance. Por eso decidí ir más allá y producir un episodio de podcast para cada
+            empresa, permitiendo que el público no solamente conozca un producto, sino también a la persona,
+            la familia, las luchas, las decisiones y los sueños que existen detrás de ese negocio.
+          </p>
+
+        </div>
+
+        <!-- Frase callout -->
+        <div class="pqn-callout reveal">
+          <p>Las personas no se conectan únicamente con las empresas.<br>Se conectan con las historias.</p>
+        </div>
+
+        <div class="pqn-body">
+
+          <p class="reveal">
+            Y para que esas historias no desaparezcan con el tiempo, tomamos una decisión aún más grande:
+            reunirlas en un libro. Cada empresario tendrá la oportunidad de dejar registrado su camino,
+            sus desafíos, sus aprendizajes y el momento en el que decidió creer en sí mismo y emprender
+            en un país que no era el suyo.
+          </p>
+
+          <p class="reveal">
+            Queremos que, dentro de muchos años, cada participante pueda mirar atrás, recordar sus inicios
+            y reconocer que su esfuerzo hizo parte de algo más grande.
+          </p>
+
+          <p class="reveal">
+            También queremos que nunca olvide que, en medio de la indiferencia que muchas veces se vive
+            al emigrar, hubo otro latino dispuesto a tenderle la mano, darle visibilidad y recordarle que
+            sí era capaz.
+          </p>
+
+        </div>
+
+        <!-- Separador -->
+        <div class="pqn-rule reveal">
+          <div class="pqn-rule-dot"></div>
+        </div>
+
+        <div class="pqn-body">
+
+          <p class="reveal">
+            El Desafío 100 Empresas nace para demostrar que las cosas pueden hacerse de una manera diferente.
+            Que podemos dejar de competir desde la distancia y comenzar a crecer desde la colaboración.
+            Que podemos recomendarnos, apoyarnos, consumir nuestros productos y fortalecer juntos una
+            verdadera comunidad empresarial latina.
+          </p>
+
+        </div>
+
+        <!-- Frase de cierre -->
+        <div class="pqn-closing reveal">
+          <p>
+            No estamos documentando solamente empresas.
+            <strong>Estamos documentando el valor, la resistencia y el legado<br>
+            de una generación de inmigrantes que decidió construir<br>
+            una nueva vida en Canadá.</strong>
+          </p>
+        </div>
+
+        <!-- Botón CTA -->
+        <div class="pqn-cta reveal">
+          <a href="https://forms.gle/ZxDpuzUuEbr3LjjS6"
+             target="_blank" rel="noopener noreferrer"
+             class="btn-primary">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+            Quiero hacer parte del Desafío
+          </a>
+        </div>
+
+      </div><!-- /.pqn-inner -->
+    </div><!-- /.container -->
   </section>
 
   <!-- ═══════════════════ EPISODIOS ═══════════════════ -->

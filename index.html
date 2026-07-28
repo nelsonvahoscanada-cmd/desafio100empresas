@@ -2108,6 +2108,28 @@
       margin-top: 2.5rem;
     }
 
+
+    /* ─── MURO DEL LEGADO — ficha técnica ───────────────── */
+    .entry-city {
+      display: block;
+      font-size: 0.58rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      margin-top: 0.15rem;
+    }
+    .entry-contact {
+      margin-top: 0.35rem;
+      font-size: 0.6rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .entry-contact .ec-link {
+      color: var(--green);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .entry-contact .ec-link:hover { color: #9dd43f; }
+    .entry-contact .ec-item { color: var(--muted); }
   </style>
 </head>
 <body>
@@ -2432,14 +2454,14 @@
 
       <div class="counter-display reveal">
         <div class="counter-side counter-confirmed">
-          <span class="counter-big" id="num-confirmed">33</span>
+          <span class="counter-big" id="num-confirmed">37</span>
           <div class="counter-label">Historias confirmadas</div>
         </div>
 
         <div class="counter-slash">/</div>
 
         <div class="counter-side counter-remaining">
-          <span class="counter-big" id="num-remaining">67</span>
+          <span class="counter-big" id="num-remaining">63</span>
           <div class="counter-label">Lugares disponibles</div>
         </div>
       </div>
@@ -2448,12 +2470,12 @@
       <div class="progress-bar-wrap reveal">
         <div class="progress-meta">
           <span class="progress-meta-left">Avance del proyecto</span>
-          <span class="progress-meta-right" id="progress-pct">33%</span>
+          <span class="progress-meta-right" id="progress-pct">37%</span>
         </div>
         <div class="progress-track">
-          <div class="progress-fill" id="progress-fill" data-target="33"></div>
+          <div class="progress-fill" id="progress-fill" data-target="37"></div>
         </div>
-        <p class="progress-note">33 de 100 historias confirmadas · 67 lugares disponibles</p>
+        <p class="progress-note">37 de 100 historias confirmadas · 63 lugares disponibles</p>
       </div>
 
       <p class="counter-caption reveal" style="margin-top:2rem">Solo existen 100 lugares. No puedes quedarte por fuera.</p>
@@ -2546,210 +2568,456 @@
             </tr>
           </thead>
           <tbody>
-                        <tr>
+            <tr>
               <td><span class="entry-num">001</span></td>
-              <td><span class="entry-name">Duniaska Rodríguez Hernández</span></td>
-              <td><span class="entry-company">Retryvive Counselling</span></td>
+              <td>
+                <span class="entry-name">Duniaska Rodríguez Hernández</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Retryvive Counselling</span>
+                <div class="entry-contact"><a href="mailto:dunia@retryvive.com" class="ec-link">dunia@retryvive.com</a> · <span class="ec-item">Facebook · Instagram</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">002</span></td>
-              <td><span class="entry-name">Carmen Helena Montoya Sánchez</span></td>
-              <td><span class="entry-company">CS Consulting Canada</span></td>
+              <td>
+                <span class="entry-name">Carmen Helena Montoya Sánchez</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">CS Consulting Canada</span>
+                <div class="entry-contact"><a href="mailto:carmen33montoya@gmail.com" class="ec-link">carmen33montoya@gmail.com</a> · <span class="ec-item">TikTok · Facebook · YouTube · Instagram: CS Consulting Canada</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">003</span></td>
-              <td><span class="entry-name">Carlos D. Castillo</span></td>
-              <td><span class="entry-company">Roca Financial Group Ltd</span></td>
+              <td>
+                <span class="entry-name">Carlos D. Castillo</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Roca Financial Group Ltd</span>
+                <div class="entry-contact"><a href="mailto:advice@carlosdar.io" class="ec-link">advice@carlosdar.io</a> · <span class="ec-item">403-918-4019</span> · <span class="ec-item">Facebook: CarlosDCastilloSegurosyalgomas</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">004</span></td>
-              <td><span class="entry-name">Hugo Raúl Morales Vega</span></td>
-              <td><span class="entry-company">La Costeñita Latin Market Food</span></td>
+              <td>
+                <span class="entry-name">Hugo Raúl Morales Vega</span>
+                <span class="entry-city">Airdrie</span>
+              </td>
+              <td>
+                <span class="entry-company">La Costeñita Latin Market Food</span>
+                <div class="entry-contact"><a href="mailto:hrmorales9@hotmail.com" class="ec-link">hrmorales9@hotmail.com</a> · <span class="ec-item">825-488-5472</span> · <span class="ec-item">Instagram · Facebook · TikTok: @lacosteñitacalgary</span> · <a href="https://www.lacosteñitacalgary.ca" target="_blank" rel="noopener" class="ec-link">www.lacosteñitacalgary.ca</a></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">005</span></td>
-              <td><span class="entry-name">Milena Bolaños</span></td>
-              <td><span class="entry-company">Milena Children Stylist</span></td>
+              <td>
+                <span class="entry-name">Milena Bolaños</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Milena Children Stylist</span>
+                <div class="entry-contact"><a href="mailto:blado7915@gmail.com" class="ec-link">blado7915@gmail.com</a> · <span class="ec-item">403-607-2608</span> · <span class="ec-item">TikTok: @MilenaChildrenStylist · Instagram: @milenachildrensstylist</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">006</span></td>
-              <td><span class="entry-name">Jerica</span></td>
-              <td><span class="entry-company">Jackelines Hair Studio</span></td>
+              <td>
+                <span class="entry-name">Jerica</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Jackelines Hair Studio</span>
+                <div class="entry-contact"><a href="mailto:jericaarana36@gmail.com" class="ec-link">jericaarana36@gmail.com</a> · <span class="ec-item">Instagram: Jackelines hair studio</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">007</span></td>
-              <td><span class="entry-name">Jorge Navas</span></td>
-              <td><span class="entry-company">Aquatech Cleaner Services</span></td>
+              <td>
+                <span class="entry-name">Jorge Navas</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Aquatech Cleaner Services</span>
+                <div class="entry-contact"><a href="mailto:navas@aquatechcleaner.com" class="ec-link">navas@aquatechcleaner.com</a> · <span class="ec-item">403-400-6520</span> · <a href="https://www.aquatechcleaner.com" target="_blank" rel="noopener" class="ec-link">www.aquatechcleaner.com</a></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">008</span></td>
-              <td><span class="entry-name">Abraham Ortega</span></td>
-              <td><span class="entry-company">Vittalia Wellness</span></td>
+              <td>
+                <span class="entry-name">Abraham Ortega</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Vittalia Wellness</span>
+                <div class="entry-contact"><a href="mailto:abrahamvittalia@outlook.com" class="ec-link">abrahamvittalia@outlook.com</a> · <span class="ec-item">Instagram: @vittaliawellness · Facebook: VittaliaWellness</span> · <a href="https://vittaliawellness.noterro.com" target="_blank" rel="noopener" class="ec-link">vittaliawellness.noterro.com</a></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">009</span></td>
-              <td><span class="entry-name">María Acosta</span></td>
-              <td><span class="entry-company">Eco Doors</span></td>
+              <td>
+                <span class="entry-name">María Acosta</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Eco Doors</span>
+                <div class="entry-contact"><a href="mailto:mfernandaacosta1997@gmail.com" class="ec-link">mfernandaacosta1997@gmail.com</a> · <span class="ec-item">587-894-0337</span> · <a href="https://ecodoors.ca" target="_blank" rel="noopener" class="ec-link">ecodoors.ca</a></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">010</span></td>
-              <td><span class="entry-name">Fabiola Andrea Rueda Moreno</span></td>
-              <td><span class="entry-company">Holy Tastes Latin Food</span></td>
+              <td>
+                <span class="entry-name">Fabiola Andrea Rueda Moreno</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Holy Tastes Latin Food</span>
+                <div class="entry-contact"><a href="mailto:razonesf@gmail.com" class="ec-link">razonesf@gmail.com</a> · <span class="ec-item">Instagram: @holytastes.latinfood</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">011</span></td>
-              <td><span class="entry-name">Gabriel Herrera Paniagua</span></td>
-              <td><span class="entry-company">Electrician Guy</span></td>
+              <td>
+                <span class="entry-name">Gabriel Herrera Paniagua</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Electrician Guy</span>
+                <div class="entry-contact"><a href="mailto:gabrielh@electricianguy.ca" class="ec-link">gabrielh@electricianguy.ca</a> · <span class="ec-item">Facebook · WhatsApp</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">012</span></td>
-              <td><span class="entry-name">Francisco Muñoz Corral</span></td>
-              <td><span class="entry-company">Corral Woodworking</span></td>
+              <td>
+                <span class="entry-name">Francisco Muñoz Corral</span>
+                <span class="entry-city">Okotoks</span>
+              </td>
+              <td>
+                <span class="entry-company">Corral Woodworking</span>
+                <div class="entry-contact"><a href="mailto:corralrusticfurniture@yahoo.com" class="ec-link">corralrusticfurniture@yahoo.com</a> · <span class="ec-item">403-498-8304</span> · <span class="ec-item">Facebook · Instagram</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">013</span></td>
-              <td><span class="entry-name">Deicy Hernández</span></td>
-              <td><span class="entry-company">Llanofrut</span></td>
+              <td>
+                <span class="entry-name">Deicy Hernández</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Llanofrut</span>
+                <div class="entry-contact"><a href="mailto:llanofrut@gmail.com" class="ec-link">llanofrut@gmail.com</a> · <span class="ec-item">587-839-0746</span> · <span class="ec-item">TikTok · Facebook</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">014</span></td>
-              <td><span class="entry-name">Ana María</span></td>
-              <td><span class="entry-company">Variaciones de Comidas</span></td>
+              <td>
+                <span class="entry-name">Ana María</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Variaciones de Comidas</span>
+                <div class="entry-contact"><a href="mailto:anagermadita@gmail.com" class="ec-link">anagermadita@gmail.com</a></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">015</span></td>
-              <td><span class="entry-name">Diana Cardona</span></td>
-              <td><span class="entry-company">Diana Cardona | Marca Personal</span></td>
+              <td>
+                <span class="entry-name">Diana Cardona</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Diana Cardona | Marca Personal</span>
+                <div class="entry-contact"><a href="mailto:dianakatecm89@gmail.com" class="ec-link">dianakatecm89@gmail.com</a> · <span class="ec-item">587-434-6393</span> · <span class="ec-item">Instagram: @dianaacardona_ · TikTok: @dianak_cm</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">016</span></td>
-              <td><span class="entry-name">Catherin Torres</span></td>
-              <td><span class="entry-company">Universidad de Cosmética Natural</span></td>
+              <td>
+                <span class="entry-name">Catherin Torres</span>
+                <span class="entry-city">Airdrie</span>
+              </td>
+              <td>
+                <span class="entry-company">Universidad de Cosmética Natural</span>
+                <div class="entry-contact"><a href="mailto:kata.florez@gmail.com" class="ec-link">kata.florez@gmail.com</a> · <span class="ec-item">403-501-4701</span> · <span class="ec-item">Instagram: @mundodekata · TikTok/YouTube: @elmundodekata</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">017</span></td>
-              <td><span class="entry-name">Diana Bernal</span></td>
-              <td><span class="entry-company">Punto Latino</span></td>
+              <td>
+                <span class="entry-name">Diana Bernal</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Punto Latino</span>
+                <div class="entry-contact"><a href="mailto:puntolatinoyyc@gmail.com" class="ec-link">puntolatinoyyc@gmail.com</a> · <span class="ec-item">403-629-4247</span> · <span class="ec-item">Instagram: @puntolatinoyyc</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">018</span></td>
-              <td><span class="entry-name">Juan Acosta</span></td>
-              <td><span class="entry-company">Mortgage Broker</span></td>
+              <td>
+                <span class="entry-name">Juan Acosta</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Mortgage Broker</span>
+                <div class="entry-contact"><a href="mailto:juan@enrichmortgage.ca" class="ec-link">juan@enrichmortgage.ca</a> · <span class="ec-item">825-733-3244</span> · <span class="ec-item">Instagram: @cristinaacostateam</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">019</span></td>
-              <td><span class="entry-name">Carlos Briceño</span></td>
-              <td><span class="entry-company">Duo Creative Labs</span></td>
+              <td>
+                <span class="entry-name">Carlos Briceño</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Duo Creative Labs</span>
+                <div class="entry-contact"><a href="mailto:duo.creativelabs@gmail.com" class="ec-link">duo.creativelabs@gmail.com</a> · <span class="ec-item">825-488-6676</span> · <span class="ec-item">Instagram: @duolabs.tech</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">020</span></td>
-              <td><span class="entry-name">Vladimir González</span></td>
-              <td><span class="entry-company">Maxi Foods</span></td>
+              <td>
+                <span class="entry-name">Vladimir González</span>
+                <span class="entry-city">Airdrie</span>
+              </td>
+              <td>
+                <span class="entry-company">Maxi Foods</span>
+                <div class="entry-contact"><a href="mailto:vladimirgm23@gmail.com" class="ec-link">vladimirgm23@gmail.com</a> · <span class="ec-item">403-608-2476</span> · <span class="ec-item">Instagram: @maxifoodsmexican</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">021</span></td>
-              <td><span class="entry-name">Sandra Constanza Noreña Báez</span></td>
-              <td><span class="entry-company">Grooming by Sandy</span></td>
+              <td>
+                <span class="entry-name">Sandra Constanza Noreña Báez</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Grooming by Sandy</span>
+                <div class="entry-contact"><a href="mailto:saconoba@gmail.com" class="ec-link">saconoba@gmail.com</a> · <span class="ec-item">681-7015</span> · <span class="ec-item">Instagram · Facebook</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">022</span></td>
-              <td><span class="entry-name">Fernando Corona</span></td>
-              <td><span class="entry-company">WenFer</span></td>
+              <td>
+                <span class="entry-name">Fernando Corona</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">WenFer</span>
+                <div class="entry-contact"><a href="mailto:fernandotntgym@gmail.com" class="ec-link">fernandotntgym@gmail.com</a> · <span class="ec-item">825-365-9746</span> · <span class="ec-item">Facebook</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">023</span></td>
-              <td><span class="entry-name">Yasmin Bedoya</span></td>
-              <td><span class="entry-company">YB Insurance Broker</span></td>
+              <td>
+                <span class="entry-name">Yasmin Bedoya</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">YB Insurance Broker</span>
+                <div class="entry-contact"><a href="mailto:hello@yasminbedoya.ca" class="ec-link">hello@yasminbedoya.ca</a> · <span class="ec-item">Instagram: @ybinsurancebroker</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">024</span></td>
-              <td><span class="entry-name">Cynthya Bringss</span></td>
-              <td><span class="entry-company">Athletica Gymnastics</span></td>
+              <td>
+                <span class="entry-name">Cynthya Bringss</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Athletica Gymnastics</span>
+                <div class="entry-contact"><a href="mailto:cbringas@athleticagymnastics.com" class="ec-link">cbringas@athleticagymnastics.com</a> · <span class="ec-item">403-686-3135</span> · <span class="ec-item">Instagram: @athleticagymnastics</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">025</span></td>
-              <td><span class="entry-name">Gina Marcela Salinas Gutiérrez</span></td>
-              <td><span class="entry-company">Sterna Global Immigration Inc</span></td>
+              <td>
+                <span class="entry-name">Gina Marcela Salinas Gutiérrez</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Sterna Global Immigration Inc</span>
+                <div class="entry-contact"><a href="mailto:digital@sternaglobal.com" class="ec-link">digital@sternaglobal.com</a> · <span class="ec-item">403-397-4582</span> · <span class="ec-item">Instagram: @sternaglobal</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">026</span></td>
-              <td><span class="entry-name">Josue Martinez</span></td>
-              <td><span class="entry-company">Servi Auto Inc</span></td>
+              <td>
+                <span class="entry-name">Josue Martinez</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Servi Auto Inc</span>
+                <div class="entry-contact"><a href="mailto:josuemartinez0531@gmail.com" class="ec-link">josuemartinez0531@gmail.com</a> · <span class="ec-item">Instagram: Servi Auto</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">027</span></td>
-              <td><span class="entry-name">Kelly Bibiana Granada Bustamante</span></td>
-              <td><span class="entry-company">Ángeles Celestiales Floral Art</span></td>
+              <td>
+                <span class="entry-name">Kelly Bibiana Granada Bustamante</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Ángeles Celestiales Floral Art</span>
+                <div class="entry-contact"><a href="mailto:kebillygr@gmail.com" class="ec-link">kebillygr@gmail.com</a> · <span class="ec-item">403-200-6470</span> · <span class="ec-item">Instagram: @angeles_celestiales_artfloral</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">028</span></td>
-              <td><span class="entry-name">Bibiana Gallego</span></td>
-              <td><span class="entry-company">BG Accounting Services Ltd</span></td>
+              <td>
+                <span class="entry-name">Bibiana Gallego</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">BG Accounting Services Ltd</span>
+                <div class="entry-contact"><a href="mailto:info@bgservi.com" class="ec-link">info@bgservi.com</a> · <span class="ec-item">403-650-2816</span> · <span class="ec-item">Instagram: @bgaccountingyyc</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">029</span></td>
-              <td><span class="entry-name">Vladimir Iglesias</span></td>
-              <td><span class="entry-company">Image360 Calgary North</span></td>
+              <td>
+                <span class="entry-name">Vladimir Iglesias</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Image360 Calgary North</span>
+                <div class="entry-contact"><a href="mailto:vladimir@image360calgarynorth.ca" class="ec-link">vladimir@image360calgarynorth.ca</a> · <span class="ec-item">403-991-3131</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">030</span></td>
-              <td><span class="entry-name">Andrea Rodriguez</span></td>
-              <td><span class="entry-company">Zion Property Care Ltd</span></td>
+              <td>
+                <span class="entry-name">Andrea Rodriguez</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Zion Property Care Ltd</span>
+                <div class="entry-contact"><a href="mailto:andrearodriguezr1@hotmail.com" class="ec-link">andrearodriguezr1@hotmail.com</a> · <span class="ec-item">587-577-3444</span> · <span class="ec-item">Instagram: @andrearodriguezr · @zionpropertycare</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">031</span></td>
-              <td><span class="entry-name">Adriana Fernandez</span></td>
-              <td><span class="entry-company">Adriana Fern Psychology</span></td>
+              <td>
+                <span class="entry-name">Adriana Fernandez</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Adriana Fern Psychology</span>
+                <div class="entry-contact"><a href="mailto:adrianafern.psych@gmail.com" class="ec-link">adrianafern.psych@gmail.com</a> · <span class="ec-item">587-742-0078</span> · <span class="ec-item">Instagram: @adriana_fern_psychology</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">032</span></td>
-              <td><span class="entry-name">Gloria Patricia Aristizabal</span></td>
-              <td><span class="entry-company">MH Aesthetics Clinic</span></td>
+              <td>
+                <span class="entry-name">Gloria Patricia Aristizabal</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">MH Aesthetics Clinic</span>
+                <div class="entry-contact"><a href="mailto:mhastheticlinic@gmail.com" class="ec-link">mhastheticlinic@gmail.com</a> · <span class="ec-item">587-718-3833</span> · <span class="ec-item">Facebook · Instagram</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td><span class="entry-num">033</span></td>
-              <td><span class="entry-name">Sandra Castro</span></td>
-              <td><span class="entry-company">Sandra Castro Realtor</span></td>
+              <td>
+                <span class="entry-name">Sandra Castro</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">Sandra Castro Realtor</span>
+                <div class="entry-contact"><a href="mailto:sandracastrorealtor@gmail.com" class="ec-link">sandracastrorealtor@gmail.com</a> · <span class="ec-item">403-471-5947</span> · <span class="ec-item">Instagram: @sandracastro.yycrealtor</span></div>
+              </td>
+              <td><span class="status-badge status-confirmed">Confirmado</span></td>
+            </tr>
+            <tr>
+              <td><span class="entry-num">034</span></td>
+              <td>
+                <span class="entry-name">Jhony A. Muñoz</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">J.M Painting</span>
+                <div class="entry-contact"><a href="mailto:Duesjo@hotmail.com" class="ec-link">Duesjo@hotmail.com</a> · <span class="ec-item">Instagram</span></div>
+              </td>
+              <td><span class="status-badge status-confirmed">Confirmado</span></td>
+            </tr>
+            <tr>
+              <td><span class="entry-num">035</span></td>
+              <td>
+                <span class="entry-name">Joel Hernandez</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">It4Calgary</span>
+                <div class="entry-contact"><a href="mailto:joel@it4c.ca" class="ec-link">joel@it4c.ca</a> · <span class="ec-item">587-284-4822</span> · <span class="ec-item">Instagram: @it4calgary</span></div>
+              </td>
+              <td><span class="status-badge status-confirmed">Confirmado</span></td>
+            </tr>
+            <tr>
+              <td><span class="entry-num">036</span></td>
+              <td>
+                <span class="entry-name">Wendy Montoya Aguirre</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">WenFerGroup</span>
+                <div class="entry-contact"><a href="mailto:wenarregui@gmail.com" class="ec-link">wenarregui@gmail.com</a> · <span class="ec-item">587-703-3630</span> · <span class="ec-item">Instagram: @WendyMontoya</span></div>
+              </td>
+              <td><span class="status-badge status-confirmed">Confirmado</span></td>
+            </tr>
+            <tr>
+              <td><span class="entry-num">037</span></td>
+              <td>
+                <span class="entry-name">Nayibe Lamilla Fajardo</span>
+                <span class="entry-city">Calgary</span>
+              </td>
+              <td>
+                <span class="entry-company">N&W Financial Group Company Inc</span>
+                <div class="entry-contact"><a href="mailto:nayibe@nwfinancial.ca" class="ec-link">nayibe@nwfinancial.ca</a> · <span class="ec-item">403-612-1443</span> · <span class="ec-item">Instagram: @nw.financial</span></div>
+              </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
             <tr>
               <td colspan="4" style="text-align:center; padding: 1.5rem; color:var(--muted); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase">
-                + 67 lugares disponibles
+                + 63 lugares disponibles
               </td>
             </tr>
-                    </tbody>
+          </tbody>
         </table>
       </div>
 

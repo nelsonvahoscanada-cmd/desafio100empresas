@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Desafío 100 Empresas — 100 empresarios latinos. 100 historias. Un legado. Una iniciativa de El Podcast del Migrante y eRadio Global Corp. Solo quedan 96 lugares.">
-  <meta name="keywords" content="empresarios latinos Canada, emprendimiento latino, podcast del migrante, eradio global, desafio 100 empresas, negocios latinos Canada, Alberta empresarios">
+  <meta name="description" content="Desafío 100 Empresas Calgary — Primera implementación de Desafío Emprende Canadá. 100 empresarios latinos. 100 historias. Un legado. Ecosistema de visibilidad, conexión y fortalecimiento empresarial para emprendedores latinos en Calgary, Alberta.">
+  <meta name="keywords" content="Desafío 100 Empresas Calgary, Desafío Emprende Canadá, empresarios latinos Calgary, emprendedores latinos Calgary, negocios latinos Calgary, Latino entrepreneurs Calgary, Hispanic businesses Calgary, entrepreneurship Calgary, emprendimiento latino Alberta, podcast del migrante, eradio global">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Nelson Vahos · eRadio Global Corp.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Desafío 100 Empresas — Documentando el Legado de una Generación">
-  <meta property="og:description" content="100 empresarios latinos. 100 historias. Un legado. Solo quedan 96 lugares disponibles. Una iniciativa de El Podcast del Migrante.">
+  <meta property="og:title" content="Desafío 100 Empresas Calgary — Primera implementación de Desafío Emprende Canadá">
+  <meta property="og:description" content="48 empresarios inscritos. 25 entrevistas realizadas. 100 empresas meta. Ecosistema de visibilidad y fortalecimiento empresarial para latinos en Calgary.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CA">
   <meta property="og:site_name" content="Desafío 100 Empresas">
@@ -41,7 +41,7 @@
   }
   </script>
 
-  <title>Desafío 100 Empresas — Documentando el Legado de una Generación</title>
+  <title>Desafío 100 Empresas Calgary | Desafío Emprende Canadá — 100 Empresarios Latinos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -2130,6 +2130,225 @@
     }
     .entry-contact .ec-link:hover { color: #9dd43f; }
     .entry-contact .ec-item { color: var(--muted); }
+
+    /* ─── SECCIÓN: POR QUÉ CALGARY ──────────────────────── */
+    #por-que-calgary {
+      background: var(--card);
+      padding: 6rem 0;
+      border-top: 1px solid var(--border);
+    }
+    .pqc-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (min-width: 768px) { .pqc-grid { grid-template-columns: 1fr 1fr; } }
+
+    .pqc-stat-block {
+      text-align: center;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--black);
+    }
+    .pqc-stat-num {
+      font-family: var(--font-mono);
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1;
+      display: block;
+    }
+    .pqc-stat-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.5rem;
+      display: block;
+    }
+    .pqc-note {
+      font-size: 0.62rem;
+      color: var(--border);
+      margin-top: 0.4rem;
+      font-style: italic;
+    }
+
+    /* ─── SECCIÓN: RESULTADOS ────────────────────────────── */
+    #resultados {
+      background: var(--black);
+      padding: 5rem 0;
+      border-top: 1px solid var(--border);
+    }
+    .res-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) { .res-grid { grid-template-columns: repeat(4, 1fr); } }
+    .res-card {
+      text-align: center;
+      padding: 1.75rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--card);
+      transition: border-color 0.2s;
+    }
+    .res-card:hover { border-color: rgba(141,198,63,0.3); }
+    .res-num {
+      font-family: var(--font-mono);
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1;
+      display: block;
+    }
+    .res-label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ash);
+      margin-top: 0.5rem;
+      display: block;
+    }
+    .res-highlight {
+      margin-top: 2.5rem;
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--white);
+    }
+    .res-note {
+      font-size: 0.68rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+
+    /* ─── SECCIÓN: VISIÓN PARA CRECER ────────────────────── */
+    #vision-crecer {
+      background: var(--card);
+      padding: 6rem 0;
+      border-top: 1px solid var(--border);
+    }
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (min-width: 900px) { .vision-grid { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+
+    /* Diagrama jerárquico */
+    .vision-tree { display: flex; flex-direction: column; gap: 0; }
+    .vision-node {
+      padding: 1rem 1.25rem;
+      border-left: 2px solid var(--border);
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .vision-node.active { border-left-color: var(--green); background: rgba(141,198,63,0.04); border-radius: 0 4px 4px 0; }
+    .vision-node.future { opacity: 0.5; }
+    .vision-node-label {
+      font-size: 0.52rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+    .vision-node.active .vision-node-label { color: var(--green); }
+    .vision-node-name {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .vision-node-status {
+      font-size: 0.52rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-top: 0.2rem;
+    }
+    .vision-node.active .vision-node-status { color: var(--green); }
+    .vision-node.future .vision-node-status { color: var(--muted); }
+    .vision-arrow {
+      padding: 0.3rem 1.25rem;
+      color: var(--border);
+      font-size: 0.75rem;
+    }
+
+    /* Hoja de ruta */
+    .roadmap { display: flex; flex-direction: column; gap: 1px; }
+    .roadmap-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--black);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+      transition: border-color 0.2s;
+    }
+    .roadmap-item.active { border-color: rgba(141,198,63,0.3); }
+    .roadmap-num {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      font-weight: 700;
+      color: var(--green);
+      min-width: 48px;
+      padding-top: 0.15rem;
+    }
+    .roadmap-info {}
+    .roadmap-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.15rem;
+    }
+    .roadmap-sub {
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+    .roadmap-badge {
+      margin-left: auto;
+      font-size: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      white-space: nowrap;
+      align-self: center;
+    }
+    .badge-active { background: var(--green); color: #000; }
+    .badge-proj   { background: #222; color: var(--muted); border: 1px solid #333; }
+    .badge-future { background: transparent; color: var(--border); border: 1px solid var(--border); }
+
+    /* ─── SECCIÓN: ALIANZAS ──────────────────────────────── */
+    #alianzas {
+      background: var(--black);
+      padding: 5rem 0;
+      border-top: 1px solid var(--border);
+    }
+    .alianzas-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .alianzas-inner .display-md {
+      margin-bottom: 1.25rem;
+    }
+    .alianzas-inner .body-lg {
+      margin-bottom: 2rem;
+    }
   </style>
 </head>
 <body>
@@ -2158,10 +2377,11 @@
 
     <ul class="nav-links">
       <li><a href="#que-es">El Desafío</a></li>
-      <li><a href="#por-que-nace">Por qué nace</a></li>
-      <li><a href="#episodios">Episodios</a></li><li><a href="#dias-desafio">El Reto</a></li><li><a href="#muro">Participantes</a></li>
+      <li><a href="#muro">Empresas</a></li>
+      <li><a href="#episodios">Entrevistas</a></li>
       <li><a href="#el-libro">El Libro</a></li>
-      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="#vision-crecer">Visión</a></li>
+      <li><a href="#equipo">Equipo</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
 
@@ -2195,7 +2415,7 @@
     <div class="hero-bg"></div>
 
     <div class="hero-content">
-      <p class="hero-eyebrow">Una iniciativa de El Podcast del Migrante · eRadio Global Corp.</p>
+      <p class="hero-eyebrow">Primera implementación de Desafío Emprende Canadá · El Podcast del Migrante · eRadio Global Corp.</p>
 
       <h1 class="hero-title">
         Desafío<br>
@@ -2206,9 +2426,9 @@
       <p class="hero-tagline">Los legados se construyen con historias.</p>
 
       <div class="hero-stats">
-        <span>100 empresarios</span>
-        <div class="dot"></div>
         <span>100 historias</span>
+        <div class="dot"></div>
+        <span>Una ciudad a la vez</span>
         <div class="dot"></div>
         <span>Un legado</span>
       </div>
@@ -2312,60 +2532,95 @@
     </div>
   </section>
 
+
+  <!-- ═══════════════════ POR QUÉ CALGARY ═══════════════════ -->
+  <section id="por-que-calgary">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">El contexto</span>
+        <div class="section-header-line"></div>
+      </div>
+      <h2 class="display-lg reveal" style="margin-bottom:2rem">¿Por qué <span style="color:var(--green)">Calgary?</span></h2>
+
+      <div class="pqc-grid">
+        <div class="reveal">
+          <p class="body-lg" style="margin-bottom:1.25rem">Calgary es una de las ciudades de mayor crecimiento de Canadá y se ha convertido en un destino importante para familias, profesionales y emprendedores latinoamericanos.</p>
+          <p class="body-lg" style="margin-bottom:1.25rem">El Censo de Canadá 2021 identificó <strong style="color:var(--white)">31,855 personas</strong> dentro de la categoría Latin American en Calgary. Los datos del Censo 2026 todavía no están disponibles, pero considerando el crecimiento de la ciudad, el proyecto utiliza como referencia que la comunidad latinoamericana en Calgary y su región podría superar actualmente las <strong style="color:var(--white)">40,000 personas.</strong></p>
+          <p class="body-sm" style="color:var(--muted); font-style:italic">* Esta cifra es una estimación de referencia, no una cifra oficial.</p>
+          <p class="body-lg mt-3">Nuestro propósito no es crear un ecosistema empresarial aislado. Buscamos que los empresarios latinos sean más visibles, estén mejor conectados y tengan mayores oportunidades de integrarse al ecosistema económico y empresarial de Calgary.</p>
+        </div>
+
+        <div class="reveal">
+          <div class="pqc-stat-block">
+            <span class="pqc-stat-num">40,000+</span>
+            <span class="pqc-stat-label">Latinoamericanos en Calgary y región</span>
+            <p class="pqc-note">Estimación de referencia basada en el Censo 2021 y el crecimiento posterior de la ciudad.</p>
+          </div>
+          <div class="pqc-stat-block" style="margin-top:1rem">
+            <span class="pqc-stat-num">100</span>
+            <span class="pqc-stat-label">Empresas que queremos conocer, documentar y conectar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════════ CÓMO FUNCIONA ═══════════════════ -->
   <section id="como-funciona">
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow">Cómo funciona</span>
+        <span class="eyebrow">El Modelo 100</span>
         <div class="section-header-line"></div>
       </div>
-
+      <p class="body-lg reveal" style="margin-bottom:2.5rem">Desafío 100 Empresas no es solamente una serie de entrevistas. Es una metodología para identificar empresarios, conocer sus historias, aumentar su visibilidad, generar conexiones, crear encuentros, documentar experiencias y medir resultados.</p>
       <div class="steps-grid">
         <div class="step-item reveal">
           <div class="step-num">— 01</div>
           <div>
-            <div class="step-title">Postulación</div>
-            <div class="step-body">Completas el formulario de aplicación. El equipo editorial evalúa tu perfil y te confirma tu lugar entre los 100.</div>
+            <div class="step-title">Identificar</div>
+            <div class="step-body">Conocemos a empresarios y emprendedores latinos en Calgary. Evaluamos su perfil y confirmamos su participación gratuita en el proyecto.</div>
           </div>
         </div>
-
         <div class="step-item reveal">
           <div class="step-num">— 02</div>
           <div>
-            <div class="step-title">Coordinación</div>
-            <div class="step-body">Acordamos fecha, hora y formato de la entrevista. Puede ser presencial en Alberta o virtual para empresarios en otras provincias de Canadá.</div>
+            <div class="step-title">Entrevistar</div>
+            <div class="step-body">Realizamos una entrevista audiovisual donde el empresario comparte su historia, su empresa, sus aprendizajes y su visión de futuro.</div>
           </div>
         </div>
-
         <div class="step-item reveal">
           <div class="step-num">— 03</div>
           <div>
-            <div class="step-title">La entrevista</div>
-            <div class="step-body">25 minutos donde tu historia toma protagonismo. Hablamos de tu origen, tu visión y el legado que estás construyendo en Canadá.</div>
+            <div class="step-title">Visibilizar</div>
+            <div class="step-body">Publicamos los episodios en YouTube, TikTok y las plataformas de El Podcast del Migrante y eRadio Global, alcanzando a miles de personas.</div>
           </div>
         </div>
-
         <div class="step-item reveal">
           <div class="step-num">— 04</div>
           <div>
-            <div class="step-title">Publicación</div>
-            <div class="step-body">Tu episodio se publica en El Podcast del Migrante y las plataformas de eRadio Global, alcanzando a miles de latinos en Canadá y América.</div>
+            <div class="step-title">Conectar</div>
+            <div class="step-body">Generamos encuentros empresariales donde los participantes se conocen, crean redes y desarrollan nuevas oportunidades de colaboración.</div>
           </div>
         </div>
-
         <div class="step-item reveal">
           <div class="step-num">— 05</div>
           <div>
-            <div class="step-title">El Libro</div>
-            <div class="step-body">Tu historia forma parte de la obra editorial colectiva. Disponible en Amazon para toda la comunidad latina alrededor del mundo.</div>
+            <div class="step-title">Reunir</div>
+            <div class="step-body">Organizamos espacios de encuentro entre empresarios, organizaciones aliadas y la comunidad latina para fortalecer el ecosistema empresarial.</div>
           </div>
         </div>
-
         <div class="step-item reveal">
           <div class="step-num">— 06</div>
           <div>
-            <div class="step-title">El Legado</div>
-            <div class="step-body">Formas parte de los 100. Una generación de emprendedores documentada para la historia de los latinos en Canadá.</div>
+            <div class="step-title">Documentar</div>
+            <div class="step-body">Las 100 historias se reúnen en una obra editorial que preserva la memoria del emprendimiento latino en Calgary para las generaciones futuras.</div>
+          </div>
+        </div>
+        <div class="step-item reveal">
+          <div class="step-num">— 07</div>
+          <div>
+            <div class="step-title">Medir</div>
+            <div class="step-body">Evaluamos resultados, aprendizajes y alcance. Los datos de esta primera edición en Calgary guiarán la expansión del modelo a otras ciudades.</div>
           </div>
         </div>
       </div>
@@ -2429,8 +2684,8 @@
           <svg class="benefit-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M18 4l3 9h9l-7 5 3 9-8-6-8 6 3-9-7-5h9z"/>
           </svg>
-          <div class="benefit-title">Legado histórico</div>
-          <div class="benefit-body">Tu nombre y empresa quedan registrados para siempre en el Muro del Legado del Desafío 100 Empresas. Una marca en la historia del emprendimiento latino en Canadá.</div>
+          <div class="benefit-title">Encuentros empresariales</div>
+          <div class="benefit-body">Más allá de las entrevistas. El proyecto contempla encuentros presenciales donde los participantes se conectan, generan networking y desarrollan oportunidades reales de colaboración con otros empresarios y organizaciones aliadas.</div>
         </div>
       </div>
     </div>
@@ -2454,14 +2709,14 @@
 
       <div class="counter-display reveal">
         <div class="counter-side counter-confirmed">
-          <span class="counter-big" id="num-confirmed">41</span>
+          <span class="counter-big" id="num-confirmed">48</span>
           <div class="counter-label">Historias confirmadas</div>
         </div>
 
         <div class="counter-slash">/</div>
 
         <div class="counter-side counter-remaining">
-          <span class="counter-big" id="num-remaining">59</span>
+          <span class="counter-big" id="num-remaining">52</span>
           <div class="counter-label">Lugares disponibles</div>
         </div>
       </div>
@@ -2470,12 +2725,12 @@
       <div class="progress-bar-wrap reveal">
         <div class="progress-meta">
           <span class="progress-meta-left">Avance del proyecto</span>
-          <span class="progress-meta-right" id="progress-pct">41%</span>
+          <span class="progress-meta-right" id="progress-pct">48%</span>
         </div>
         <div class="progress-track">
-          <div class="progress-fill" id="progress-fill" data-target="41"></div>
+          <div class="progress-fill" id="progress-fill" data-target="48"></div>
         </div>
-        <p class="progress-note">41 de 100 historias confirmadas · 59 lugares disponibles</p>
+        <p class="progress-note">48 de 100 historias confirmadas · 52 lugares disponibles</p>
       </div>
 
       <p class="counter-caption reveal" style="margin-top:2rem">Solo existen 100 lugares. No puedes quedarte por fuera.</p>
@@ -2491,6 +2746,39 @@
     </div>
   </section>
 
+
+
+  <!-- ═══════════════════ RESULTADOS ═══════════════════ -->
+  <section id="resultados">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Resultados hasta la fecha</span>
+        <div class="section-header-line"></div>
+      </div>
+
+      <div class="res-grid">
+        <div class="res-card reveal">
+          <span class="res-num">48</span>
+          <span class="res-label">Empresas inscritas</span>
+        </div>
+        <div class="res-card reveal">
+          <span class="res-num">25</span>
+          <span class="res-label">Entrevistas realizadas</span>
+        </div>
+        <div class="res-card reveal">
+          <span class="res-num">35K+</span>
+          <span class="res-label">Seguidores en TikTok</span>
+        </div>
+        <div class="res-card reveal">
+          <span class="res-num">100</span>
+          <span class="res-label">Empresas meta</span>
+        </div>
+      </div>
+
+      <p class="res-highlight reveal">"Este proyecto no es una idea por comenzar. Ya está sucediendo."</p>
+      <p class="res-note reveal">La primera etapa comenzó con recursos propios de eRadio Global Corp. Los contenidos se promocionan en TikTok y las entrevistas completas se publican en YouTube.</p>
+    </div>
+  </section>
 
   <!-- ═══════════════════ DÍAS DEL DESAFÍO ═══════════════════ -->
   <section id="dias-desafio">
@@ -3060,9 +3348,51 @@
               </td>
               <td><span class="status-badge status-confirmed">Confirmado</span></td>
             </tr>
+                        <tr>
+              <td><span class="entry-num">042</span></td>
+              <td><span class="entry-name">Cristina Acosta</span><span class="entry-city">Calgary</span></td>
+              <td><span class="entry-company">Cristina Acosta Mortgage Team</span><div class="entry-contact"><a href="mailto:cristina@enrichmortgage.ca" class="ec-link">cristina@enrichmortgage.ca</a> · <span class="ec-item">403-801-2857</span> · <span class="ec-item">@cristinaacostateam</span></div></td>
+              <td><span class="status-badge status-confirmed">Confirmado</span></td>
+            </tr>
+            <tr>
+              <td><span class="entry-num">043</span></td>
+              <td><span class="entry-name">Diego Orjuela Ramos</span><span class="entry-city">Calgary</span></td>
+              <td><span class="entry-company">Diego Orjuela — Realtor® · Property Manager</span><div class="entry-contact"><a href="mailto:diego.realtoradvisor@gmail.com" class="ec-link">diego.realtoradvisor@gmail.com</a> · <span class="ec-item">@diegorjuela_realtor</span></div></td>
+              <td><span class="status-badge status-confirmed">Confirmado</span></td>
+            </tr>
+            <tr>
+              <td><span class="entry-num">044</span></td>
+              <td><span class="entry-name">Lesdy Johana Perilla Ruiz</span><span class="entry-city">Winnipeg</span></td>
+              <td><span class="entry-company">Wonder Picnics and Events</span><div class="entry-contact"><a href="mailto:wonderpicnicevents@gmail.com" class="ec-link">wonderpicnicevents@gmail.com</a> · <span class="ec-item">204-619-8425</span> · <span class="ec-item">@wonderpicnicsandevents</span></div></td>
+              <td><span class="status-badge status-confirmed">Confirmado</span></td>
+            </tr>
+            <tr>
+              <td><span class="entry-num">045</span></td>
+              <td><span class="entry-name">Juan Sebastián Izquierdo García</span><span class="entry-city">Calgary</span></td>
+              <td><span class="entry-company">PLEASE</span><div class="entry-contact"><a href="mailto:info@pleaseservice.ca" class="ec-link">info@pleaseservice.ca</a> · <span class="ec-item">587-836-2866</span> · <span class="ec-item">@PLEASE_SERVICE</span></div></td>
+              <td><span class="status-badge status-confirmed">Confirmado</span></td>
+            </tr>
+            <tr>
+              <td><span class="entry-num">046</span></td>
+              <td><span class="entry-name">Maritza Korzo</span><span class="entry-city">Calgary</span></td>
+              <td><span class="entry-company">NJ Accounting Consultants Inc.</span><div class="entry-contact"><a href="mailto:maritza@njaccountingc.com" class="ec-link">maritza@njaccountingc.com</a> · <span class="ec-item">403-389-4441</span></div></td>
+              <td><span class="status-badge status-confirmed">Confirmado</span></td>
+            </tr>
+            <tr>
+              <td><span class="entry-num">047</span></td>
+              <td><span class="entry-name">Yenny J. Suárez</span><span class="entry-city">Calgary</span></td>
+              <td><span class="entry-company">Mis Finanzas con Yenny</span><div class="entry-contact"><a href="mailto:misfinanzasconyenny@gmail.com" class="ec-link">misfinanzasconyenny@gmail.com</a> · <span class="ec-item">403-835-1747</span> · <span class="ec-item">@misfinanzasconyenny</span></div></td>
+              <td><span class="status-badge status-confirmed">Confirmado</span></td>
+            </tr>
+            <tr>
+              <td><span class="entry-num">048</span></td>
+              <td><span class="entry-name">Marcela Galindo</span><span class="entry-city">Winnipeg</span></td>
+              <td><span class="entry-company">Nemapaetza — Emparepastreats</span><div class="entry-contact"><a href="mailto:emparepastreats@gmail.com" class="ec-link">emparepastreats@gmail.com</a> · <span class="ec-item">204-381-1696</span> · <span class="ec-item">@emparepastreats_wpg</span></div></td>
+              <td><span class="status-badge status-confirmed">Confirmado</span></td>
+            </tr>
             <tr>
               <td colspan="4" style="text-align:center; padding: 1.5rem; color:var(--muted); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase">
-                + 59 lugares disponibles
+                + 52 lugares disponibles
               </td>
             </tr>
           </tbody>
@@ -4229,6 +4559,92 @@
     </div>
   </section>
 
+
+  <!-- ═══════════════════ VISIÓN PARA CRECER ═══════════════════ -->
+  <section id="vision-crecer">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Una visión diseñada para crecer</span>
+        <div class="section-header-line"></div>
+      </div>
+      <p class="body-lg reveal" style="margin-bottom:3rem">Calgary constituye la primera implementación del modelo. Los resultados y aprendizajes de esta edición permitirán evaluar su expansión a Edmonton, otras ciudades de Alberta y, a largo plazo, otras provincias de Canadá.</p>
+
+      <div class="vision-grid">
+
+        <!-- Diagrama jerárquico -->
+        <div class="reveal">
+          <p class="eyebrow" style="margin-bottom:1.5rem">Arquitectura del proyecto</p>
+          <div class="vision-tree">
+            <div class="vision-node future">
+              <div class="vision-node-label">Visión nacional</div>
+              <div class="vision-node-name">Desafío Emprende Canadá</div>
+              <div class="vision-node-status">Ecosistema nacional — proyectado</div>
+            </div>
+            <div class="vision-arrow">↓</div>
+            <div class="vision-node future">
+              <div class="vision-node-label">Capítulo provincial</div>
+              <div class="vision-node-name">Emprende Alberta</div>
+              <div class="vision-node-status">Expansión proyectada</div>
+            </div>
+            <div class="vision-arrow">↓</div>
+            <div class="vision-node active">
+              <div class="vision-node-label">Primera implementación — Activo</div>
+              <div class="vision-node-name">Desafío 100 Empresas Calgary</div>
+              <div class="vision-node-status">✦ En ejecución · Primera edición 2026</div>
+            </div>
+            <div class="vision-arrow">↓</div>
+            <div class="vision-node future">
+              <div class="vision-node-label">Expansión futura</div>
+              <div class="vision-node-name">Desafío 100 Empresas Edmonton</div>
+              <div class="vision-node-status">Evaluación pendiente</div>
+            </div>
+          </div>
+          <p class="body-sm" style="margin-top:1rem; color:var(--muted); font-style:italic">Las operaciones en otras ciudades y provincias no existen actualmente. Solo Calgary está en ejecución.</p>
+        </div>
+
+        <!-- Hoja de ruta -->
+        <div class="reveal">
+          <p class="eyebrow" style="margin-bottom:1.5rem">Hoja de ruta</p>
+          <div class="roadmap">
+            <div class="roadmap-item active">
+              <div class="roadmap-num">ETAPA 1</div>
+              <div class="roadmap-info">
+                <div class="roadmap-title">Calgary</div>
+                <div class="roadmap-sub">100 empresas · Primera edición 2026</div>
+              </div>
+              <span class="roadmap-badge badge-active">En ejecución</span>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-num">ETAPA 2</div>
+              <div class="roadmap-info">
+                <div class="roadmap-title">Emprende Alberta</div>
+                <div class="roadmap-sub">Capítulo provincial · Edmonton y otras ciudades</div>
+              </div>
+              <span class="roadmap-badge badge-proj">Proyectada</span>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-num">ETAPA 3</div>
+              <div class="roadmap-info">
+                <div class="roadmap-title">Expansión interprovincial</div>
+                <div class="roadmap-sub">Otras provincias de Canadá</div>
+              </div>
+              <span class="roadmap-badge badge-future">Futura</span>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-num">ETAPA 4</div>
+              <div class="roadmap-info">
+                <div class="roadmap-title">Desafío Emprende Canadá</div>
+                <div class="roadmap-sub">Ecosistema nacional · Visión de largo plazo</div>
+              </div>
+              <span class="roadmap-badge badge-future">Visión</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════════ FAQ ═══════════════════ -->
   <section id="faq">
     <div class="container">
@@ -4365,21 +4781,21 @@
 
       <div class="team-grid">
         <div class="team-card reveal">
-          <div class="team-role">Dirección General</div>
+          <div class="team-role">Dirección General y Producción Audiovisual</div>
           <div class="team-name">Nelson Vahos</div>
-          <div class="team-title">CEO · eRadio Global Corp.</div>
+          <div class="team-title">Concepto y dirección general · Conducción de entrevistas · Producción audiovisual · Contenidos · Relaciones institucionales · Dirección estratégica</div>
         </div>
 
         <div class="team-card reveal">
           <div class="team-role">Dirección Editorial</div>
           <div class="team-name">Alejandro Rey</div>
-          <div class="team-title">Editor</div>
+          <div class="team-title">Estructura y línea editorial · Construcción narrativa · Acompañamiento en el desarrollo de entrevistas · Documentación de historias empresariales</div>
         </div>
 
         <div class="team-card reveal">
-          <div class="team-role">Producción Audiovisual</div>
+          <div class="team-role">Dirección Administrativa, Operativa y Estratégica</div>
           <div class="team-name">Marcela Alvarado</div>
-          <div class="team-title">Producción</div>
+          <div class="team-title">Gestión administrativa y operativa · Coordinación interna · Planificación logística · Relaciones con empresarios, aliados y proveedores · Acompañamiento en la consolidación y expansión del proyecto</div>
         </div>
 
         <div class="team-card reveal">
@@ -4398,6 +4814,24 @@
           <div class="team-role">Desarrollado por</div>
           <div class="team-name">eRadio Global Corp.</div>
           <div class="team-title">www.eRadioGlobal.com</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════ ALIANZAS ═══════════════════ -->
+  <section id="alianzas">
+    <div class="container">
+      <div class="alianzas-inner">
+        <p class="eyebrow reveal" style="margin-bottom:1.25rem">Alianzas estratégicas</p>
+        <h2 class="display-md reveal">¿Tu organización quiere<br><em style="color:var(--green); font-style:italic">ser parte del legado?</em></h2>
+        <p class="body-lg reveal">Buscamos organizaciones que quieran acompañar una iniciativa que combina emprendimiento, comunicación, conexión empresarial y legado. Una oportunidad de impacto real dentro de la comunidad latina en Calgary.</p>
+        <div class="mt-4 reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="mailto:podcastdelmigrante@gmail.com" class="btn-primary">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            Conoce nuestras oportunidades de alianza
+          </a>
         </div>
       </div>
     </div>
@@ -4664,579 +5098,4 @@
       if (entries[0].isIntersecting && !counterAnimated) {
         counterAnimated = true;
 
-        const confirmed = parseInt(document.getElementById('num-confirmed').textContent, 10);
-        const remaining = parseInt(document.getElementById('num-remaining').textContent, 10);
-
-        animateCount(document.getElementById('num-confirmed'), confirmed, 1200);
-        animateCount(document.getElementById('num-remaining'), remaining, 1600);
-
-        /* Barra de progreso */
-        const fill = document.getElementById('progress-fill');
-        if (fill) {
-          const pct = parseFloat(fill.dataset.target);
-          setTimeout(() => {
-            fill.style.width = pct + '%';
-          }, 200);
-        }
-      }
-    }, { threshold: 0.3 });
-
-    if (counterSection) counterObs.observe(counterSection);
-
-    /* ══════════════════════════════════════════
-       STICKY CTA MÓVIL — aparece al salir del hero
-    ══════════════════════════════════════════ */
-    const stickyCta = document.getElementById('stickyCta');
-    const stickyClo = document.getElementById('stickyClo');
-    const heroEl    = document.getElementById('hero');
-    let stickyDismissed = false;
-
-    if (stickyCta && heroEl) {
-      const stickyObs = new IntersectionObserver(entries => {
-        if (!stickyDismissed) {
-          stickyCta.classList.toggle('visible', !entries[0].isIntersecting);
-        }
-      }, { threshold: 0.1 });
-      stickyObs.observe(heroEl);
-    }
-
-    if (stickyClo) {
-      stickyClo.addEventListener('click', () => {
-        stickyDismissed = true;
-        stickyCta.classList.remove('visible');
-      });
-    }
-
-    /* ══════════════════════════════════════════
-       TOAST — copia email al portapapeles
-    ══════════════════════════════════════════ */
-    const toast = document.getElementById('toast');
-    let toastTimer;
-
-    function showToast(msg) {
-      if (!toast) return;
-      toast.textContent = msg;
-      toast.classList.add('show');
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
-    }
-
-    /* Hacer clic en el email lo copia */
-    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-      link.addEventListener('click', e => {
-        const email = link.getAttribute('href').replace('mailto:', '');
-        if (navigator.clipboard) {
-          e.preventDefault();
-          navigator.clipboard.writeText(email)
-            .then(() => showToast('Email copiado · ' + email))
-            .catch(() => { /* dejar comportamiento nativo */ });
-        }
-      });
-    });
-
-    /* ══════════════════════════════════════════
-       REVEAL con delay escalonado en grids
-    ══════════════════════════════════════════ */
-    document.querySelectorAll(
-      '.benefits-grid .benefit-card, .team-grid .team-card, .steps-grid .step-item'
-    ).forEach((card, i) => {
-      card.style.transitionDelay = (i * 60) + 'ms';
-    });
-
-
-    /* ══════════════════════════════════════════
-       CRONÓMETRO DEL DESAFÍO — sección propia
-       Inicio: 11 de julio de 2026 · 90 días
-    ══════════════════════════════════════════ */
-    (function() {
-      const START      = new Date('2026-07-11T00:00:00');
-      const TOTAL_DAYS = 90;
-
-      function updateDays() {
-        const now      = new Date();
-        const elapsed  = Math.floor((now - START) / 86400000);
-        const dayNum   = Math.min(Math.max(elapsed + 1, 1), TOTAL_DAYS);
-        const remaining= Math.max(TOTAL_DAYS - dayNum, 0);
-        const pct      = Math.round((dayNum / TOTAL_DAYS) * 100);
-
-        const setEl = (id, val) => { const e = document.getElementById(id); if (e) e.textContent = val; };
-        setEl('dc-day',       dayNum);
-        setEl('dc-remaining', remaining);
-        setEl('dc-pct',       pct + '%');
-
-        const fill = document.getElementById('dc-fill');
-        if (fill) setTimeout(() => fill.style.width = pct + '%', 400);
-      }
-
-      updateDays();
-      const now = new Date();
-      const msToMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1) - now;
-      setTimeout(() => { updateDays(); setInterval(updateDays, 86400000); }, msToMidnight);
-    })();
-
-
-    /* Soporte teclado para ep-cards */
-    document.querySelectorAll('.ep-card[role="button"]').forEach(card => {
-      card.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
-      });
-    });
-
-
-    /* ══════════════════════════════════════════════════
-       MÓDULO EPISODIOS — filtros y modal únicamente
-       Las tarjetas existen en HTML y no dependen de JS
-    ══════════════════════════════════════════════════ */
-    (function () {
-
-      /* ── FILTROS ── */
-      var filterWrap = document.getElementById('epFilters');
-      if (filterWrap) {
-        filterWrap.addEventListener('click', function (e) {
-          var btn = e.target.closest('.ep-filter-btn');
-          if (!btn) return;
-          document.querySelectorAll('.ep-filter-btn').forEach(function (b) {
-            b.classList.remove('active');
-          });
-          btn.classList.add('active');
-          var cat = btn.getAttribute('data-cat');
-          document.querySelectorAll('.ep-card').forEach(function (card) {
-            if (cat === 'todos' || card.getAttribute('data-cat') === cat) {
-              card.classList.remove('ep-hidden');
-            } else {
-              card.classList.add('ep-hidden');
-            }
-          });
-        });
-      }
-
-      /* ── MODAL ── */
-      var modal   = document.getElementById('episodeModal');
-      var modalBox = document.getElementById('epModalBox');
-      if (!modal) return;
-
-      function openModal(card) {
-        var d = card.dataset;
-        document.getElementById('epModalThumb').src     = d.thumb || '';
-        document.getElementById('epModalThumb').onerror = function(){ this.src = d.thumbfb || ''; };
-        document.getElementById('epModalThumb').alt     = d.empresa || '';
-        document.getElementById('epModalEp').textContent       = d.ep || '';
-        document.getElementById('epModalCat').textContent      = d.catlabel || '';
-        document.getElementById('epModalEmpresa').textContent  = d.empresa || '';
-        document.getElementById('epModalPersona').textContent  = d.persona || '';
-        document.getElementById('epModalFrase').textContent    = d.frase || '';
-        document.getElementById('epModalResumen').textContent  = d.resumen || '';
-        document.getElementById('epModalServicios').textContent = d.servicios || '';
-        document.getElementById('epModalContacto').innerHTML   = (d.contacto || '—')
-          .split('|').map(function(s){ return '<span>' + s.trim() + '</span>'; }).join('<br>');
-
-        var btnWatch   = document.getElementById('epModalBtnWatch');
-        var btnCompany = document.getElementById('epModalBtnCompany');
-        btnWatch.href  = d.youtube || '#';
-        if (d.companyurl) {
-          btnCompany.href = d.companyurl;
-          btnCompany.style.display = 'flex';
-        } else {
-          btnCompany.style.display = 'none';
-        }
-
-        modal.classList.add('is-open');
-        document.body.style.overflow = 'hidden';
-        document.getElementById('epModalClose').focus();
-      }
-
-      function closeModal() {
-        modal.classList.remove('is-open');
-        document.body.style.overflow = '';
-      }
-
-      /* Abrir modal al pulsar "Información" */
-      document.querySelectorAll('.ep-btn-info').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var card = btn.closest('.ep-card');
-          if (card) openModal(card);
-        });
-      });
-
-      /* Cerrar: botón X */
-      document.getElementById('epModalClose').addEventListener('click', closeModal);
-
-      /* Cerrar: clic en el fondo oscuro */
-      modal.addEventListener('click', function (e) {
-        if (e.target === modal) closeModal();
-      });
-
-      /* Cerrar: tecla Escape */
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
-      });
-
-      /* Soporte teclado en cards */
-      document.querySelectorAll('.ep-card').forEach(function(card){
-        card.setAttribute('tabindex', '0');
-        card.addEventListener('keydown', function(e){
-          if(e.key === 'Enter') openModal(card);
-        });
-      });
-
-    })();
-
-  </script>
-</body>
-</html
-    /* ══════════════════════════════════════════
-       MÓDULO EPISODIOS — Premium Grid / Carousel
-    ══════════════════════════════════════════ */
-
-    #episodios { background: #0a0a0a; padding: 5rem 0 6rem; }
-
-    /* ── Filtros ── */
-    .ep-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
-    .ep-filter-btn {
-      background: transparent;
-      border: 1px solid #2a2a2a;
-      color: #666;
-      font-family: var(--font-body);
-      font-size: 0.58rem; font-weight: 600;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      padding: 0.45rem 1.1rem; border-radius: 20px;
-      cursor: pointer; transition: all 0.2s;
-    }
-    .ep-filter-btn:hover, .ep-filter-btn.active {
-      background: var(--green); border-color: var(--green); color: #000;
-    }
-
-    /* ════════════════════════════════
-       MÓVIL — carrusel horizontal
-    ════════════════════════════════ */
-    .ep-carousel-wrap {
-      display: flex;
-      gap: 1rem;
-      overflow-x: scroll;
-      -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      padding-bottom: 0.5rem;
-    }
-    .ep-carousel-wrap::-webkit-scrollbar { display: none; }
-
-    .ep-card {
-      flex: 0 0 85%;
-      max-width: 85%;
-      scroll-snap-align: start;
-      background: #141414;
-      border-radius: 10px;
-      overflow: hidden;
-      border: 1px solid #232323;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s;
-      cursor: pointer;
-    }
-
-    /* ════════════════════════════════
-       DESKTOP — grid 3 columnas
-    ════════════════════════════════ */
-    @media (min-width: 700px) {
-      .ep-carousel-wrap {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-        overflow-x: visible;
-        padding-bottom: 0;
-        scroll-snap-type: none;
-      }
-      .ep-card {
-        flex: none;
-        max-width: none;
-        scroll-snap-align: none;
-      }
-      .ep-card:hover {
-        transform: translateY(-6px) scale(1.02);
-        border-color: rgba(141,198,63,0.45);
-        box-shadow:
-          0 20px 50px rgba(0,0,0,0.55),
-          0 0 0 1px rgba(141,198,63,0.12),
-          0 0 30px rgba(141,198,63,0.08);
-      }
-    }
-
-    /* ── Thumbnail ── */
-    .ep-thumb {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      background: #090909;
-      flex-shrink: 0;
-    }
-    .ep-thumb img {
-      width: 100%; height: 100%;
-      object-fit: cover; display: block;
-      transition: transform 0.45s ease;
-    }
-    @media (min-width: 700px) {
-      .ep-card:hover .ep-thumb img { transform: scale(1.06); }
-    }
-
-    /* Gradiente inferior sobre la imagen */
-    .ep-thumb-gradient {
-      position: absolute; inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0) 45%,
-        rgba(0,0,0,0.7) 100%
-      );
-      pointer-events: none;
-    }
-
-    /* Coming soon overlay */
-    .ep-card.ep-soon .ep-thumb img { filter: grayscale(75%) brightness(0.45); }
-
-    /* ── Badges sobre la imagen ── */
-    .ep-cat {
-      position: absolute; top: 0.7rem; left: 0.7rem; z-index: 3;
-      background: var(--green); color: #000;
-      font-size: 0.46rem; font-weight: 900;
-      letter-spacing: 0.16em; text-transform: uppercase;
-      padding: 0.22rem 0.65rem; border-radius: 3px;
-    }
-    .ep-num {
-      position: absolute; top: 0.7rem; right: 0.7rem; z-index: 3;
-      background: rgba(0,0,0,0.72);
-      backdrop-filter: blur(6px);
-      color: #fff;
-      font-family: var(--font-mono);
-      font-size: 0.46rem; font-weight: 700;
-      letter-spacing: 0.1em;
-      padding: 0.22rem 0.6rem; border-radius: 3px;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-    .ep-status-badge {
-      position: absolute; bottom: 0.7rem; left: 0.7rem; z-index: 3;
-      font-size: 0.44rem; font-weight: 800;
-      letter-spacing: 0.16em; text-transform: uppercase;
-      padding: 0.22rem 0.65rem; border-radius: 3px;
-    }
-    .ep-status-editing { background: #f59e0b; color: #000; }
-    .ep-status-soon    { background: #1e1e1e; color: #666; border: 1px solid #333; }
-
-    /* ── Franja de información (siempre visible) ── */
-    .ep-info {
-      padding: 0.9rem 1rem 1rem;
-      background: #141414;
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-      flex: 1;
-    }
-
-    /* Línea sup: categoría + episodio */
-    .ep-info-meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 0.1rem;
-    }
-    .ep-info-cat {
-      font-size: 0.52rem; font-weight: 700;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--green);
-    }
-    .ep-info-epnum {
-      font-family: var(--font-mono);
-      font-size: 0.5rem; color: #555;
-      letter-spacing: 0.08em;
-    }
-
-    /* Nombre empresa */
-    .ep-empresa-name {
-      font-family: var(--font-display);
-      font-size: 1rem; font-weight: 700;
-      color: var(--white); line-height: 1.2;
-    }
-
-    /* Nombre empresario */
-    .ep-person-name {
-      font-size: 0.7rem; color: var(--ash);
-      font-weight: 400;
-    }
-
-    /* ── Botones — siempre visibles ── */
-    .ep-card-btns {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 0.75rem;
-    }
-
-    .ep-btn-watch {
-      flex: 1;
-      display: flex; align-items: center; justify-content: center; gap: 0.4rem;
-      background: var(--green); color: #000;
-      font-size: 0.58rem; font-weight: 800;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 0.6rem 0.75rem; border-radius: 5px;
-      text-decoration: none; border: none; cursor: pointer;
-      transition: background 0.18s;
-      white-space: nowrap;
-    }
-    .ep-btn-watch::before {
-      content: '';
-      display: inline-block; width: 0; height: 0;
-      border-style: solid;
-      border-width: 4px 0 4px 8px;
-      border-color: transparent transparent transparent #000;
-      flex-shrink: 0;
-    }
-    .ep-btn-watch:hover { background: #9dd43f; color: #000; }
-
-    .ep-btn-info {
-      display: flex; align-items: center; justify-content: center;
-      background: transparent;
-      border: 1px solid #333; color: var(--ash);
-      font-size: 0.58rem; font-weight: 700;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      padding: 0.6rem 0.9rem; border-radius: 5px;
-      cursor: pointer;
-      transition: border-color 0.18s, color 0.18s, background 0.18s;
-      white-space: nowrap;
-    }
-    .ep-btn-info:hover {
-      border-color: var(--green); color: var(--green);
-      background: rgba(141,198,63,0.06);
-    }
-
-    /* ── Hidden por filtro ── */
-    .ep-card.hidden { display: none; }
-
-    /* ── CTA final ── */
-    .ep-cta-bottom {
-      margin-top: 3.5rem; padding: 3rem 2rem;
-      border: 1px solid var(--border); border-radius: 8px;
-      background: linear-gradient(135deg, #0d1a0d, #080808);
-      text-align: center;
-    }
-    .ep-cta-bottom p {
-      font-family: var(--font-display);
-      font-size: clamp(1.2rem, 3vw, 1.8rem);
-      font-weight: 300; font-style: italic;
-      color: var(--white); margin-bottom: 1.5rem;
-    }
-
-    /* ════════════════════════════
-       MODAL
-    ════════════════════════════ */
-    .ep-modal-overlay {
-      position: fixed; inset: 0;
-      background: rgba(0,0,0,0.88);
-      backdrop-filter: blur(8px);
-      z-index: 1000;
-      display: flex; align-items: center; justify-content: center;
-      padding: 1.5rem;
-      opacity: 0; pointer-events: none;
-      transition: opacity 0.3s;
-    }
-    .ep-modal-overlay.open { opacity: 1; pointer-events: all; }
-
-    .ep-modal {
-      background: #141414;
-      border: 1px solid #2a2a2a; border-radius: 12px;
-      width: 100%; max-width: 620px; max-height: 90vh;
-      overflow-y: auto;
-      scrollbar-width: thin; scrollbar-color: var(--green) #1a1a1a;
-      transform: translateY(20px) scale(0.97);
-      transition: transform 0.3s;
-    }
-    .ep-modal-overlay.open .ep-modal { transform: translateY(0) scale(1); }
-
-    .ep-modal-thumb {
-      width: 100%; aspect-ratio: 16/9;
-      object-fit: cover; display: block;
-      border-radius: 10px 10px 0 0; filter: brightness(0.85);
-    }
-    .ep-modal-header {
-      padding: 1.25rem 1.5rem 0;
-      display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;
-    }
-    .ep-modal-badges { display: flex; gap: 0.5rem; margin-bottom: 0.6rem; }
-    .ep-modal-cat {
-      font-size: 0.5rem; font-weight: 800;
-      letter-spacing: 0.16em; text-transform: uppercase;
-      background: var(--green); color: #000;
-      padding: 0.22rem 0.7rem; border-radius: 3px;
-    }
-    .ep-modal-ep {
-      font-family: var(--font-mono);
-      font-size: 0.5rem; font-weight: 700; letter-spacing: 0.12em;
-      color: var(--ash); background: #222;
-      padding: 0.22rem 0.7rem; border-radius: 3px;
-    }
-    .ep-modal-close {
-      width: 32px; height: 32px; flex-shrink: 0;
-      background: #222; border: 1px solid #333; border-radius: 50%;
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-      color: var(--ash); font-size: 1rem; line-height: 1;
-      transition: background 0.2s, color 0.2s;
-    }
-    .ep-modal-close:hover { background: #333; color: var(--white); }
-
-    .ep-modal-body { padding: 0 1.5rem 1.5rem; }
-    .ep-modal-empresa {
-      font-family: var(--font-display);
-      font-size: 1.55rem; font-weight: 700;
-      color: var(--white); line-height: 1.15; margin-bottom: 0.2rem;
-    }
-    .ep-modal-person { font-size: 0.78rem; color: var(--green); font-weight: 500; margin-bottom: 1rem; }
-    .ep-modal-frase {
-      font-family: var(--font-display);
-      font-size: 1.1rem; font-weight: 400; font-style: italic;
-      color: var(--white); line-height: 1.45;
-      border-left: 3px solid var(--green); padding-left: 1rem; margin-bottom: 1.2rem;
-    }
-    .ep-modal-section-label {
-      font-size: 0.5rem; font-weight: 700;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--green); margin-bottom: 0.4rem; display: block;
-    }
-    .ep-modal-text { font-size: 0.8rem; color: var(--ash); line-height: 1.7; margin-bottom: 1rem; }
-    .ep-modal-divider { height: 1px; background: #222; margin: 0.75rem 0; }
-    .ep-modal-contact-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 0.5rem 1.5rem; margin-bottom: 1.25rem;
-    }
-    .ep-modal-contact-item { font-size: 0.75rem; color: var(--ash); line-height: 1.5; }
-    .ep-modal-contact-item a { color: var(--ash); text-decoration: none; transition: color 0.2s; }
-    .ep-modal-contact-item a:hover { color: var(--green); }
-    .ep-modal-contact-label {
-      font-size: 0.48rem; font-weight: 700; letter-spacing: 0.18em;
-      text-transform: uppercase; color: var(--muted);
-      display: block; margin-bottom: 0.15rem;
-    }
-    .ep-modal-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; padding-top: 0.5rem; }
-    .ep-modal-btn-primary {
-      flex: 1; min-width: 140px;
-      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
-      background: var(--green); color: #000;
-      font-size: 0.63rem; font-weight: 800;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 0.8rem 1.2rem; border-radius: 6px;
-      text-decoration: none; border: none; cursor: pointer;
-      transition: background 0.2s;
-    }
-    .ep-modal-btn-primary::before {
-      content: ''; width: 0; height: 0;
-      border-style: solid; border-width: 5px 0 5px 9px;
-      border-color: transparent transparent transparent #000; flex-shrink: 0;
-    }
-    .ep-modal-btn-primary:hover { background: #9dd43f; color: #000; }
-    .ep-modal-btn-secondary {
-      flex: 1; min-width: 140px;
-      display: flex; align-items: center; justify-content: center;
-      background: transparent; border: 1px solid #333; color: var(--ash);
-      font-size: 0.63rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 0.8rem 1.2rem; border-radius: 6px;
-      text-decoration: none; cursor: pointer; transition: border-color 0.2s, color 0.2s;
-    }
-    .ep-modal-btn-secondary:hover { border-color: var(--green); color: var(--green); }
-
->
+        const confirmed = parseInt(document.getElementById('num-confirmed').textC

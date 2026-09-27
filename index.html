@@ -10,7 +10,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Desafío 100 Empresas Calgary — Primera implementación de Desafío Emprende Canadá">
-  <meta property="og:description" content="48 empresarios inscritos. 25 entrevistas realizadas. 100 empresas meta. Ecosistema de visibilidad y fortalecimiento empresarial para latinos en Calgary.">
+  <meta property="og:description" content="48 empresarios inscritos. 36 entrevistas realizadas. 100 empresas meta. Ecosistema de visibilidad y fortalecimiento empresarial para latinos en Calgary.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CA">
   <meta property="og:site_name" content="Desafío 100 Empresas">
@@ -1488,649 +1488,6 @@
     }
     .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-    /* ─── SECCIÓN DÍAS DEL DESAFÍO ──────────────────────── */
-    #dias-desafio {
-      background: var(--black);
-      padding: 6rem 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      text-align: center;
-    }
-
-    .dias-grid {
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-      gap: 0;
-      flex-wrap: wrap;
-      margin: 3rem 0 2.5rem;
-    }
-
-    .dias-bloque {
-      flex: 1;
-      min-width: 160px;
-      max-width: 280px;
-      padding: 0 2rem;
-      text-align: center;
-      position: relative;
-    }
-
-    /* Separador vertical entre bloques */
-    .dias-bloque + .dias-bloque::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 10%; bottom: 10%;
-      width: 1px;
-      background: var(--border);
-    }
-
-    .dias-num {
-      font-family: var(--font-mono);
-      font-size: clamp(4rem, 12vw, 8rem);
-      font-weight: 700;
-      line-height: 1;
-      display: block;
-      letter-spacing: -0.02em;
-    }
-    .dias-num.verde   { color: var(--green); text-shadow: 0 0 60px rgba(141,198,63,0.2); }
-    .dias-num.opaco   { color: #2a2a2a; }
-    .dias-num.gris    { color: #444; }
-
-    .dias-label {
-      font-size: 0.58rem;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: 0.75rem;
-      display: block;
-    }
-
-    /* Barra de progreso de días */
-    .dias-progress-wrap {
-      max-width: 500px;
-      margin: 0 auto 1.5rem;
-    }
-    .dias-progress-meta {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.6rem;
-    }
-    .dias-progress-meta span {
-      font-size: 0.58rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .dias-progress-meta strong {
-      color: var(--green);
-      font-family: var(--font-mono);
-      font-weight: 700;
-    }
-    .dias-track {
-      width: 100%;
-      height: 2px;
-      background: var(--border);
-      border-radius: 2px;
-      overflow: hidden;
-    }
-    .dias-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--green-dk), var(--green));
-      border-radius: 2px;
-      width: 0%;
-      transition: width 1.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .dias-fecha-txt {
-      font-size: 0.68rem;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-    }
-    .dias-fecha-txt span { color: var(--green); font-family: var(--font-mono); }
-
-
-    /* ═══════════════════════════════════════════════════════
-       MÓDULO EPISODIOS — Desafío 100 Empresas
-       Versión estable · HTML estático · JS solo para modal
-    ═══════════════════════════════════════════════════════ */
-
-    /* ── Sección ── */
-    #episodios {
-      background: #0a0a0a;
-      padding: 5rem 0 5rem;
-    }
-
-    /* ── Filtros ── */
-    .ep-filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 2.5rem;
-    }
-    .ep-filter-btn {
-      background: transparent;
-      border: 1px solid #282828;
-      color: #666;
-      font-family: var(--font-body);
-      font-size: 0.58rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 0.45rem 1.1rem;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: background 0.2s, border-color 0.2s, color 0.2s;
-    }
-    .ep-filter-btn:hover  { border-color: var(--green); color: var(--green); }
-    .ep-filter-btn.active { background: var(--green); border-color: var(--green); color: #000; }
-
-    /* ── Contenedor: MÓVIL = carrusel, DESKTOP = grid ── */
-    .ep-grid {
-      /* MÓVIL — carrusel horizontal */
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      padding-bottom: 0.75rem;
-    }
-    .ep-grid::-webkit-scrollbar { display: none; }
-
-    /* TABLET — 2 columnas */
-    @media (min-width: 640px) {
-      .ep-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        overflow-x: visible;
-        scroll-snap-type: none;
-        gap: 1.25rem;
-        padding-bottom: 0;
-      }
-    }
-
-    /* DESKTOP — 4 columnas */
-    @media (min-width: 1024px) {
-      .ep-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.5rem;
-      }
-    }
-
-    /* ── Card ── */
-    .ep-card {
-      /* móvil: 86% del ancho, carrusel */
-      flex: 0 0 86%;
-      max-width: 86%;
-      scroll-snap-align: start;
-      background: #141414;
-      border: 1px solid #222;
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.28s ease, border-color 0.28s, box-shadow 0.28s;
-    }
-
-    /* en grid no hay flex shrink */
-    @media (min-width: 640px) {
-      .ep-card {
-        flex: none;
-        max-width: none;
-        scroll-snap-align: none;
-      }
-    }
-
-    /* hover desktop */
-    @media (min-width: 1024px) {
-      .ep-card:hover {
-        transform: translateY(-5px) scale(1.03);
-        border-color: rgba(141,198,63,0.4);
-        box-shadow: 0 16px 48px rgba(0,0,0,0.55),
-                    0 0 0 1px rgba(141,198,63,0.1),
-                    0 0 24px rgba(141,198,63,0.06);
-      }
-    }
-
-    /* Filtro oculto */
-    .ep-card.ep-hidden { display: none; }
-
-    /* ── Thumbnail ── */
-    .ep-thumb {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      background: #090909;
-      flex-shrink: 0;
-    }
-    .ep-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-    @media (min-width: 1024px) {
-      .ep-card:hover .ep-thumb img { transform: scale(1.05); }
-    }
-
-    /* Degradado sobre la imagen */
-    .ep-thumb-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.65) 100%);
-      pointer-events: none;
-    }
-
-    /* Badge número */
-    .ep-badge-num {
-      position: absolute;
-      top: 0.6rem; right: 0.6rem;
-      background: rgba(0,0,0,0.72);
-      backdrop-filter: blur(6px);
-      color: #fff;
-      font-family: var(--font-mono);
-      font-size: 0.46rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      padding: 0.2rem 0.55rem;
-      border-radius: 3px;
-      border: 1px solid rgba(255,255,255,0.07);
-    }
-
-    /* Badge categoría */
-    .ep-badge-cat {
-      position: absolute;
-      top: 0.6rem; left: 0.6rem;
-      background: var(--green);
-      color: #000;
-      font-size: 0.44rem;
-      font-weight: 900;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      padding: 0.2rem 0.6rem;
-      border-radius: 3px;
-    }
-
-    /* ── Info bajo la imagen ── */
-    .ep-info {
-      padding: 0.85rem 1rem 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-      flex: 1;
-      background: #141414;
-    }
-    .ep-empresa {
-      font-family: var(--font-display);
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.2;
-    }
-    .ep-persona {
-      font-size: 0.7rem;
-      color: var(--ash);
-    }
-
-    /* Botones */
-    .ep-btns {
-      display: flex;
-      gap: 0.45rem;
-      margin-top: 0.65rem;
-    }
-    .ep-btn-ver {
-      flex: 1;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.35rem;
-      background: var(--green);
-      color: #000;
-      font-size: 0.55rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.55rem 0.7rem;
-      border-radius: 4px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: background 0.18s;
-      white-space: nowrap;
-    }
-    .ep-btn-ver:hover { background: #9dd43f; color: #000; }
-    .ep-btn-ver::before {
-      content: '';
-      display: inline-block;
-      width: 0; height: 0;
-      border-style: solid;
-      border-width: 4px 0 4px 7px;
-      border-color: transparent transparent transparent #000;
-      flex-shrink: 0;
-    }
-    .ep-btn-ver.disabled {
-      background: #2a2a2a;
-      color: #555;
-      cursor: not-allowed;
-      pointer-events: none;
-    }
-    .ep-btn-ver.disabled::before { border-color: transparent transparent transparent #555; }
-
-    .ep-btn-info {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.3rem;
-      background: transparent;
-      border: 1px solid #333;
-      color: var(--ash);
-      font-size: 0.55rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.55rem 0.8rem;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: border-color 0.18s, color 0.18s, background 0.18s;
-      white-space: nowrap;
-    }
-    .ep-btn-info:hover {
-      border-color: var(--green);
-      color: var(--green);
-      background: rgba(141,198,63,0.05);
-    }
-
-    /* ── CTA final ── */
-    .ep-cta {
-      margin-top: 4rem;
-      padding: 3rem 2rem;
-      text-align: center;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: linear-gradient(135deg, #0d1a0d 0%, #080808 100%);
-    }
-    .ep-cta p {
-      font-family: var(--font-display);
-      font-size: clamp(1.2rem, 3vw, 1.75rem);
-      font-weight: 300;
-      font-style: italic;
-      color: var(--white);
-      margin-bottom: 1.5rem;
-    }
-
-    /* ════════════════════════════
-       MODAL
-    ════════════════════════════ */
-    .episode-modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      background: rgba(0,0,0,0.88);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-    .episode-modal.is-open {
-      display: flex;
-    }
-
-    .ep-modal-box {
-      background: #141414;
-      border: 1px solid #2a2a2a;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 600px;
-      max-height: 90vh;
-      overflow-y: auto;
-      scrollbar-width: thin;
-      scrollbar-color: var(--green) #1a1a1a;
-      position: relative;
-    }
-
-    .ep-modal-thumb {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      display: block;
-      border-radius: 10px 10px 0 0;
-    }
-
-    .ep-modal-close {
-      position: absolute;
-      top: 0.75rem; right: 0.75rem;
-      width: 32px; height: 32px;
-      background: rgba(0,0,0,0.7);
-      border: 1px solid #333;
-      border-radius: 50%;
-      color: #fff;
-      font-size: 1rem;
-      cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s;
-      z-index: 10;
-    }
-    .ep-modal-close:hover { background: #333; }
-
-    .ep-modal-body { padding: 1.25rem 1.5rem 1.5rem; }
-
-    .ep-modal-badges {
-      display: flex; gap: 0.5rem; flex-wrap: wrap;
-      margin-bottom: 0.85rem;
-    }
-    .ep-modal-badge-ep {
-      font-family: var(--font-mono);
-      font-size: 0.5rem; font-weight: 700; letter-spacing: 0.12em;
-      background: #222; color: var(--ash);
-      padding: 0.22rem 0.7rem; border-radius: 3px;
-    }
-    .ep-modal-badge-cat {
-      font-size: 0.5rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
-      background: var(--green); color: #000;
-      padding: 0.22rem 0.7rem; border-radius: 3px;
-    }
-
-    .ep-modal-empresa {
-      font-family: var(--font-display);
-      font-size: 1.5rem; font-weight: 700;
-      color: var(--white); line-height: 1.15;
-      margin-bottom: 0.2rem;
-    }
-    .ep-modal-persona {
-      font-size: 0.78rem; color: var(--green);
-      font-weight: 500; margin-bottom: 1rem;
-    }
-    .ep-modal-frase {
-      font-family: var(--font-display);
-      font-size: 1.05rem; font-weight: 400; font-style: italic;
-      color: var(--white); line-height: 1.4;
-      border-left: 3px solid var(--green);
-      padding-left: 1rem; margin-bottom: 1.1rem;
-    }
-    .ep-modal-label {
-      display: block;
-      font-size: 0.5rem; font-weight: 700;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--green); margin-bottom: 0.35rem;
-    }
-    .ep-modal-text {
-      font-size: 0.8rem; color: var(--ash);
-      line-height: 1.7; margin-bottom: 1rem;
-    }
-    .ep-modal-divider { height: 1px; background: #222; margin: 1rem 0; }
-
-    .ep-modal-contact { font-size: 0.78rem; color: var(--ash); line-height: 1.8; margin-bottom: 1rem; }
-    .ep-modal-contact a { color: var(--ash); text-decoration: none; transition: color 0.2s; }
-    .ep-modal-contact a:hover { color: var(--green); }
-
-    .ep-modal-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-    .ep-modal-btn-primary {
-      flex: 1; min-width: 130px;
-      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
-      background: var(--green); color: #000;
-      font-size: 0.62rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 0.8rem 1rem; border-radius: 5px;
-      text-decoration: none; border: none; cursor: pointer;
-      transition: background 0.2s;
-    }
-    .ep-modal-btn-primary:hover { background: #9dd43f; color: #000; }
-    .ep-modal-btn-primary::before {
-      content: '';
-      width: 0; height: 0;
-      border-style: solid; border-width: 5px 0 5px 9px;
-      border-color: transparent transparent transparent #000;
-    }
-    .ep-modal-btn-sec {
-      flex: 1; min-width: 130px;
-      display: flex; align-items: center; justify-content: center;
-      background: transparent; border: 1px solid #333; color: var(--ash);
-      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 0.8rem 1rem; border-radius: 5px;
-      text-decoration: none; cursor: pointer;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .ep-modal-btn-sec:hover { border-color: var(--green); color: var(--green); }
-
-
-    /* ─── SECCIÓN: POR QUÉ NACE ────────────────────────── */
-    #por-que-nace {
-      background: var(--black);
-      padding: 6rem 0 7rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .pqn-inner {
-      max-width: 820px;
-      margin: 0 auto;
-    }
-
-    /* Cita principal destacada */
-    .pqn-quote-hero {
-      border-left: 3px solid var(--green);
-      padding: 1.5rem 2rem;
-      margin: 3rem 0;
-      background: rgba(141,198,63,0.03);
-      border-radius: 0 4px 4px 0;
-    }
-    .pqn-quote-hero p {
-      font-family: var(--font-display);
-      font-size: clamp(1.3rem, 3vw, 1.9rem);
-      font-weight: 300;
-      font-style: italic;
-      color: var(--white);
-      line-height: 1.45;
-    }
-    .pqn-quote-hero cite {
-      display: block;
-      margin-top: 0.75rem;
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--green);
-      font-style: normal;
-    }
-
-    /* Párrafos del cuerpo */
-    .pqn-body p {
-      font-size: clamp(0.95rem, 2vw, 1.05rem);
-      color: #aaaaaa;
-      line-height: 1.85;
-      margin-bottom: 1.5rem;
-    }
-    .pqn-body p:last-child { margin-bottom: 0; }
-
-    /* Frase destacada grande en medio del texto */
-    .pqn-callout {
-      margin: 3rem 0;
-      padding: 0 0 0 1.75rem;
-      border-left: 2px solid var(--green);
-    }
-    .pqn-callout p {
-      font-family: var(--font-display);
-      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
-      font-weight: 600;
-      color: var(--white);
-      line-height: 1.35;
-      margin-bottom: 0 !important;
-    }
-
-    /* Línea separadora con punto verde */
-    .pqn-rule {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 3rem 0;
-    }
-    .pqn-rule::before, .pqn-rule::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-    .pqn-rule-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--green);
-      flex-shrink: 0;
-    }
-
-    /* Frase final de cierre */
-    .pqn-closing {
-      margin: 3.5rem 0 2.5rem;
-      text-align: center;
-    }
-    .pqn-closing p {
-      font-family: var(--font-display);
-      font-size: clamp(1.2rem, 3vw, 1.75rem);
-      font-weight: 300;
-      font-style: italic;
-      color: var(--white);
-      line-height: 1.4;
-    }
-    .pqn-closing strong {
-      display: block;
-      font-weight: 700;
-      font-style: normal;
-      color: var(--green);
-      margin-top: 0.4rem;
-    }
-
-    /* Botón CTA */
-    .pqn-cta {
-      text-align: center;
-      margin-top: 2.5rem;
-    }
-
-
-    /* ─── MURO DEL LEGADO — ficha técnica ───────────────── */
-    .entry-city {
-      display: block;
-      font-size: 0.58rem;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-      margin-top: 0.15rem;
-    }
-    .entry-contact {
-      margin-top: 0.35rem;
-      font-size: 0.6rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-    .entry-contact .ec-link {
-      color: var(--green);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .entry-contact .ec-link:hover { color: #9dd43f; }
-    .entry-contact .ec-item { color: var(--muted); }
-
     /* ─── SECCIÓN: POR QUÉ CALGARY ──────────────────────── */
     #por-que-calgary {
       background: var(--card);
@@ -2507,7 +1864,7 @@
         </div>
 
         <div class="reveal">
-          <p class="body-lg mt-2">Durante <strong style="color:var(--white)">90 días</strong>, el Desafío 100 Empresas recorrerá el camino de los empresarios latinos que eligieron Canadá para construir su sueño. Cada historia será capturada en formato audiovisual de 25 minutos y reunida en una obra editorial única.</p>
+          <p class="body-lg mt-2">El Desafío 100 Empresas recorre el camino de los empresarios latinos que eligieron Canadá para construir su sueño. Cada historia será capturada en formato audiovisual de 25 minutos y reunida en una obra editorial única.</p>
 
           <div class="facts-list mt-4">
             <div class="fact-item">
@@ -2762,7 +2119,7 @@
           <span class="res-label">Empresas inscritas</span>
         </div>
         <div class="res-card reveal">
-          <span class="res-num">25</span>
+          <span class="res-num">36</span>
           <span class="res-label">Entrevistas realizadas</span>
         </div>
         <div class="res-card reveal">
@@ -2780,55 +2137,8 @@
     </div>
   </section>
 
-  <!-- ═══════════════════ DÍAS DEL DESAFÍO ═══════════════════ -->
-  <section id="dias-desafio">
-    <div class="container">
 
-      <div class="section-header reveal">
-        <span class="eyebrow">Cronómetro del Desafío</span>
-        <div class="section-header-line"></div>
-      </div>
-
-      <div class="dias-grid">
-
-        <div class="dias-bloque reveal">
-          <span class="dias-num verde" id="dc-day">—</span>
-          <span class="dias-label">Día del Desafío</span>
-        </div>
-
-        <div class="dias-bloque reveal">
-          <span class="dias-num gris" id="dc-remaining">—</span>
-          <span class="dias-label">Días Restantes</span>
-        </div>
-
-        <div class="dias-bloque reveal">
-          <span class="dias-num opaco">90</span>
-          <span class="dias-label">Días Totales</span>
-        </div>
-
-      </div>
-
-      <!-- Barra de progreso de días -->
-      <div class="dias-progress-wrap reveal">
-        <div class="dias-progress-meta">
-          <span>Progreso del tiempo</span>
-          <strong id="dc-pct">—%</strong>
-        </div>
-        <div class="dias-track">
-          <div class="dias-fill" id="dc-fill"></div>
-        </div>
-      </div>
-
-      <p class="dias-fecha-txt reveal">
-        Inicio: <span>11 de julio de 2026</span>
-        &nbsp;·&nbsp;
-        Meta: <span>8 de octubre de 2026</span>
-      </p>
-
-    </div>
-  </section>
-
-  <!-- ═══════════════════ MURO DEL LEGADO ═══════════════════ -->
+    <!-- ═══════════════════ MURO DEL LEGADO ═══════════════════ -->
   <!--
     ╔══════════════════════════════════════════════════╗
     ║  AGREGAR PARTICIPANTES                           ║
@@ -4716,6 +4026,144 @@
           </div>
         </article>
 
+        
+        <!-- ═════ EPISODIO 33 ═════ -->
+        <article class="ep-card reveal"
+          data-cat="finanzas"
+          data-ep="EP 33"
+          data-catlabel="Finanzas · Hipotecas"
+          data-empresa="Cristina Acosta Mortgage Team"
+          data-persona="Cristina Acosta"
+          data-frase=""Educación y transparencia son fundamentales antes de comprar una vivienda.""
+          data-resumen="Periodista colombiana que llegó a Canadá hace 27 años sintiéndose arrepentida de haber emigrado. Reconstruyó su carrera desde cero, entró al sector financiero y hoy es Senior Mortgage Broker con 20 años de experiencia. Ha acompañado a más de 800 familias en decisiones de vivienda e hipotecas."
+          data-servicios="Asesoría hipotecaria, mortgage para primera vivienda, propiedades de inversión, refinanciamiento y planificación patrimonial inmobiliaria para familias latinas en Calgary."
+          data-contacto=""
+          data-youtube="https://www.youtube.com/watch?v=m3gEVvWqwPc"
+          data-thumb="https://img.youtube.com/vi/m3gEVvWqwPc/maxresdefault.jpg"
+          data-thumbfb="https://img.youtube.com/vi/m3gEVvWqwPc/hqdefault.jpg"
+          data-companyurl="">
+          <div class="ep-thumb">
+            <img src="https://img.youtube.com/vi/m3gEVvWqwPc/maxresdefault.jpg"
+                 alt="Episodio 33 — Cristina Acosta, Cristina Acosta Mortgage Team"
+                 loading="lazy"
+                 onerror="this.src='https://img.youtube.com/vi/m3gEVvWqwPc/hqdefault.jpg'">
+            <div class="ep-thumb-overlay"></div>
+            <span class="ep-badge-cat">Finanzas · Hipotecas</span>
+            <span class="ep-badge-num">EP 33</span>
+          </div>
+          <div class="ep-info">
+            <div class="ep-empresa">Cristina Acosta Mortgage Team</div>
+            <div class="ep-persona">Cristina Acosta</div>
+            <div class="ep-btns">
+              <!-- ENLACE YOUTUBE EPISODIO 33 -->
+              <a class="ep-btn-ver" href="https://www.youtube.com/watch?v=m3gEVvWqwPc" target="_blank" rel="noopener noreferrer">Ver Episodio</a>
+              <button class="ep-btn-info" data-ep-id="ep33">ⓘ Información</button>
+            </div>
+          </div>
+        </article>
+        <!-- ═════ EPISODIO 34 ═════ -->
+        <article class="ep-card reveal"
+          data-cat="finanzas"
+          data-ep="EP 34"
+          data-catlabel="Finanzas"
+          data-empresa="Mis Finanzas con Yenny"
+          data-persona="Yenny J. Suárez"
+          data-frase=""El dinero puede recuperarse; el tiempo, no.""
+          data-resumen="Colombiana que pasó 12 años en España antes de emigrar a Canadá. Trabajó en Domino's, Guess y limpieza mientras obtenía licencias financieras. Trabajó en CIBC y estudió contabilidad. Sus propios errores financieros se convirtieron en la herramienta con la que hoy educa a otras familias."
+          data-servicios="Educación financiera, inversiones, licencias financieras. Plataforma Mis Finanzas con Yenny para orientar a familias latinas sobre ahorro, protección e inversión. Nueva etapa vinculada a National Bank."
+          data-contacto=""
+          data-youtube="https://www.youtube.com/watch?v=TQ02VLtx9lU"
+          data-thumb="https://img.youtube.com/vi/TQ02VLtx9lU/maxresdefault.jpg"
+          data-thumbfb="https://img.youtube.com/vi/TQ02VLtx9lU/hqdefault.jpg"
+          data-companyurl="">
+          <div class="ep-thumb">
+            <img src="https://img.youtube.com/vi/TQ02VLtx9lU/maxresdefault.jpg"
+                 alt="Episodio 34 — Yenny J. Suárez, Mis Finanzas con Yenny"
+                 loading="lazy"
+                 onerror="this.src='https://img.youtube.com/vi/TQ02VLtx9lU/hqdefault.jpg'">
+            <div class="ep-thumb-overlay"></div>
+            <span class="ep-badge-cat">Finanzas</span>
+            <span class="ep-badge-num">EP 34</span>
+          </div>
+          <div class="ep-info">
+            <div class="ep-empresa">Mis Finanzas con Yenny</div>
+            <div class="ep-persona">Yenny J. Suárez</div>
+            <div class="ep-btns">
+              <!-- ENLACE YOUTUBE EPISODIO 34 -->
+              <a class="ep-btn-ver" href="https://www.youtube.com/watch?v=TQ02VLtx9lU" target="_blank" rel="noopener noreferrer">Ver Episodio</a>
+              <button class="ep-btn-info" data-ep-id="ep34">ⓘ Información</button>
+            </div>
+          </div>
+        </article>
+        <!-- ═════ EPISODIO 35 ═════ -->
+        <article class="ep-card reveal"
+          data-cat="servicios"
+          data-ep="EP 35"
+          data-catlabel="Contabilidad · Impuestos"
+          data-empresa="NJ Accounting Consultants Inc."
+          data-persona="Maritza Corso"
+          data-frase=""No compares tu primer año con la vida de alguien que lleva diez años construyendo su camino.""
+          data-resumen="Peruana que llegó hace 22 años con cinco maletas y $25. Comenzó en un albergue, sin permiso de trabajo, compartiendo apartamento con otros. Estudió producción radial y TV en Perú y luego Administración de Empresas en Canadá especializándose en impuestos. Hoy dirige su empresa contable desde Calgary."
+          data-servicios="Impuestos personales y corporativos, contabilidad, teneduría de libros y orientación financiera para familias e inmigrantes en Canadá."
+          data-contacto=""
+          data-youtube="https://www.youtube.com/watch?v=It-VuNDZI1o"
+          data-thumb="https://img.youtube.com/vi/It-VuNDZI1o/maxresdefault.jpg"
+          data-thumbfb="https://img.youtube.com/vi/It-VuNDZI1o/hqdefault.jpg"
+          data-companyurl="">
+          <div class="ep-thumb">
+            <img src="https://img.youtube.com/vi/It-VuNDZI1o/maxresdefault.jpg"
+                 alt="Episodio 35 — Maritza Corso, NJ Accounting Consultants Inc."
+                 loading="lazy"
+                 onerror="this.src='https://img.youtube.com/vi/It-VuNDZI1o/hqdefault.jpg'">
+            <div class="ep-thumb-overlay"></div>
+            <span class="ep-badge-cat">Contabilidad · Impuestos</span>
+            <span class="ep-badge-num">EP 35</span>
+          </div>
+          <div class="ep-info">
+            <div class="ep-empresa">NJ Accounting Consultants Inc.</div>
+            <div class="ep-persona">Maritza Corso</div>
+            <div class="ep-btns">
+              <!-- ENLACE YOUTUBE EPISODIO 35 -->
+              <a class="ep-btn-ver" href="https://www.youtube.com/watch?v=It-VuNDZI1o" target="_blank" rel="noopener noreferrer">Ver Episodio</a>
+              <button class="ep-btn-info" data-ep-id="ep35">ⓘ Información</button>
+            </div>
+          </div>
+        </article>
+        <!-- ═════ EPISODIO 36 ═════ -->
+        <article class="ep-card reveal"
+          data-cat="servicios"
+          data-ep="EP 36"
+          data-catlabel="Bienes Raíces"
+          data-empresa="Diego Orjuela — Realtor® · Property Manager"
+          data-persona="Diego Orjuela"
+          data-frase=""Empezar de nuevo puede significar perder cosas materiales, pero también puede convertirse en la oportunidad de reconstruir con mayor experiencia.""
+          data-resumen="Colombiano que vivió en Estados Unidos, perdió su casa y ahorros en la crisis de 2008 y llegó a Calgary con su esposa, dos hijos pequeños y ocho maletas. Reconstruyó su vida profesional y hoy trabaja como Realtor y Property Manager acompañando a familias en decisiones de vivienda en Canadá."
+          data-servicios="Compra y venta de propiedades residenciales, property management, orientación a compradores nuevos y familias inmigrantes en el mercado inmobiliario de Calgary."
+          data-contacto=""
+          data-youtube="https://www.youtube.com/watch?v=ipgUwcu3BwA"
+          data-thumb="https://img.youtube.com/vi/ipgUwcu3BwA/maxresdefault.jpg"
+          data-thumbfb="https://img.youtube.com/vi/ipgUwcu3BwA/hqdefault.jpg"
+          data-companyurl="">
+          <div class="ep-thumb">
+            <img src="https://img.youtube.com/vi/ipgUwcu3BwA/maxresdefault.jpg"
+                 alt="Episodio 36 — Diego Orjuela, Diego Orjuela — Realtor® · Property Manager"
+                 loading="lazy"
+                 onerror="this.src='https://img.youtube.com/vi/ipgUwcu3BwA/hqdefault.jpg'">
+            <div class="ep-thumb-overlay"></div>
+            <span class="ep-badge-cat">Bienes Raíces</span>
+            <span class="ep-badge-num">EP 36</span>
+          </div>
+          <div class="ep-info">
+            <div class="ep-empresa">Diego Orjuela — Realtor® · Property Manager</div>
+            <div class="ep-persona">Diego Orjuela</div>
+            <div class="ep-btns">
+              <!-- ENLACE YOUTUBE EPISODIO 36 -->
+              <a class="ep-btn-ver" href="https://www.youtube.com/watch?v=ipgUwcu3BwA" target="_blank" rel="noopener noreferrer">Ver Episodio</a>
+              <button class="ep-btn-info" data-ep-id="ep36">ⓘ Información</button>
+            </div>
+          </div>
+        </article>
+
                 <!--
         ╔══════════════════════════════════════════════════════╗
         ║  PLANTILLA PARA AGREGAR UN NUEVO EPISODIO           ║
@@ -4846,7 +4294,7 @@
               <div class="roadmap-num">ETAPA 1</div>
               <div class="roadmap-info">
                 <div class="roadmap-title">Calgary</div>
-                <div class="roadmap-sub">100 empresas · Primera edición 2026</div>
+                <div class="roadmap-sub">100 entrevistas · Primera edición Calgary</div>
               </div>
               <span class="roadmap-badge badge-active">En ejecución</span>
             </div>
@@ -5152,7 +4600,7 @@
           <div class="footer-links-label">Navegación</div>
           <ul>
             <li><a href="#que-es">El Desafío</a></li>
-            <li><a href="#episodios">Episodios</a></li><li><a href="#dias-desafio">El Reto</a></li><li><a href="#muro">Participantes</a></li>
+            <li><a href="#episodios">Episodios</a></li><li><a href="#muro">Participantes</a></li>
             
             <li><a href="#el-libro">El Libro</a></li>
             <li><a href="#faq">Preguntas</a></li>
@@ -5414,35 +4862,6 @@
     });
 
 
-    /* ══════════════════════════════════════════
-       CRONÓMETRO DEL DESAFÍO — sección propia
-       Inicio: 11 de julio de 2026 · 90 días
-    ══════════════════════════════════════════ */
-    (function() {
-      const START      = new Date('2026-07-11T00:00:00');
-      const TOTAL_DAYS = 90;
-
-      function updateDays() {
-        const now      = new Date();
-        const elapsed  = Math.floor((now - START) / 86400000);
-        const dayNum   = Math.min(Math.max(elapsed + 1, 1), TOTAL_DAYS);
-        const remaining= Math.max(TOTAL_DAYS - dayNum, 0);
-        const pct      = Math.round((dayNum / TOTAL_DAYS) * 100);
-
-        const setEl = (id, val) => { const e = document.getElementById(id); if (e) e.textContent = val; };
-        setEl('dc-day',       dayNum);
-        setEl('dc-remaining', remaining);
-        setEl('dc-pct',       pct + '%');
-
-        const fill = document.getElementById('dc-fill');
-        if (fill) setTimeout(() => fill.style.width = pct + '%', 400);
-      }
-
-      updateDays();
-      const now = new Date();
-      const msToMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1) - now;
-      setTimeout(() => { updateDays(); setInterval(updateDays, 86400000); }, msToMidnight);
-    })();
 
 
     /* Soporte teclado para ep-cards */
